@@ -6,10 +6,10 @@
 }
 
 body, html {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     height: 100%;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
     background-color: #000; /* Match your desired background */
+    overflow-x: hidden;
 }
 
 /* Navigation Bar */
@@ -36,7 +36,7 @@ body, html {
     text-decoration: none;
     font-size: 1rem;
     font-weight: bold;
-    text-transform: capitalize;
+    text-transform: lowercase;
     transition: color 0.3s ease;
 }
 
@@ -65,7 +65,6 @@ body, html {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
     padding-top: 80px; /* Add space below the nav bar */
     padding-bottom: 80px; /* Add white space below the tiles */
     position: relative;
@@ -91,18 +90,19 @@ body, html {
 /* Tiles Section */
 .tiles {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
+    grid-template-columns: repeat(5, 1fr); /* Equal columns for tiles */
     gap: 20px; /* Add space between tiles */
     width: 90%; /* Control width of the tile section */
     max-width: 1200px; /* Prevent tiles from being too wide */
     margin: 0 auto;
 }
 
+/* Tile Styling */
 .tile {
     position: relative;
     background-size: cover;
     background-position: center;
-    height: 300px; /* Uniform tile height */
+    height: 400px; /* Uniform tile height */
     border-radius: 10px; /* Add slight rounding to tiles */
     overflow: hidden; /* Ensure content stays inside the tiles */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -124,15 +124,4 @@ body, html {
     font-weight: bold;
     text-transform: capitalize;
     text-shadow: 0 4px 6px rgba(0, 0, 0, 0.4); /* Make text readable */
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-    .central-text h1 {
-        font-size: 2.5rem; /* Adjust text size for smaller screens */
-    }
-
-    .tile {
-        height: 200px; /* Smaller tiles for mobile */
-    }
 }
