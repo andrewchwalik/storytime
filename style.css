@@ -54,15 +54,16 @@ body, html {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between; /* Add space above and below tiles */
     height: 100vh;
-    overflow: hidden;
+    padding: 50px 0; /* White space above and below tiles */
     position: relative;
 }
 
 /* Central Text */
 .central-text {
     position: absolute;
+    top: 20px;
     z-index: 2;
     text-align: center;
     color: white;
@@ -78,9 +79,10 @@ body, html {
 /* Tiles */
 .tiles {
     display: grid;
-    grid-template-columns: repeat(5, 1fr); /* 5 Tiles */
-    width: 100%;
-    height: 100%;
+    grid-template-columns: repeat(5, 1fr); /* 5 Tiles in a row */
+    grid-gap: 20px; /* Add space between tiles */
+    width: 90%; /* Add margin to the tiles */
+    margin: 0 auto;
 }
 
 .tile {
@@ -88,6 +90,7 @@ body, html {
     background-size: cover;
     background-position: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 8px; /* Add slight rounding to match aesthetic */
 }
 
 .tile:hover {
@@ -104,4 +107,15 @@ body, html {
     font-weight: bold;
     text-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
     text-transform: capitalize;
+}
+
+/* Adjustments for Smaller Screens */
+@media (max-width: 768px) {
+    .tiles {
+        grid-template-columns: repeat(2, 1fr); /* 2 Tiles in a row for smaller screens */
+    }
+
+    .central-text h1 {
+        font-size: 3rem; /* Adjust title size for mobile */
+    }
 }
