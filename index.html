@@ -4,19 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Storytime</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"> <!-- Link to your main CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"> <!-- Font Awesome -->
 </head>
 <body>
     <!-- Navigation Bar -->
-    <div class="nav-bar">
+    <nav class="nav-bar">
         <div class="nav-items">
-            <a href="index.html" class="active">home.</a>
-            <a href="#weddings">weddings.</a>
-            <a href="#real-estate">real estate.</a>
-            <a href="#events">events.</a>
-            <a href="#commercials">commercials.</a>
-            <a href="#heirlooms">heirlooms.</a>
+            <a href="#">home</a>
+            <a href="#">weddings</a>
+            <a href="#">real estate</a>
+            <a href="#">events</a>
+            <a href="#">commercials</a>
+            <a href="#">heirlooms</a>
         </div>
         <div class="nav-icons">
             <a href="https://www.youtube.com" target="_blank">
@@ -26,42 +26,34 @@
                 <i class="fab fa-instagram"></i>
             </a>
         </div>
-    </div>
+    </nav>
 
-    <!-- Main Content -->
-    <div class="main-container">
-        <!-- Central Text -->
-        <div class="central-text">
+    <!-- Tiles Container -->
+    <div class="tiles-container">
+        <!-- Overlay Text -->
+        <div class="overlay">
             <h1>Storytime</h1>
         </div>
-        <!-- Tiles Section -->
-        <div class="tiles">
-            <div class="tile" style="background-image: url('https://via.placeholder.com/500');">
-                <a href="https://www.youtube.com/watch?v=example1" target="_blank">
-                    <span class="tile-title">Weddings</span>
-                </a>
-            </div>
-            <div class="tile" style="background-image: url('https://via.placeholder.com/500');">
-                <a href="https://www.youtube.com/watch?v=example2" target="_blank">
-                    <span class="tile-title">Real Estate</span>
-                </a>
-            </div>
-            <div class="tile" style="background-image: url('https://via.placeholder.com/500');">
-                <a href="https://www.youtube.com/watch?v=example3" target="_blank">
-                    <span class="tile-title">Events</span>
-                </a>
-            </div>
-            <div class="tile" style="background-image: url('https://via.placeholder.com/500');">
-                <a href="https://www.youtube.com/watch?v=example4" target="_blank">
-                    <span class="tile-title">Commercials</span>
-                </a>
-            </div>
-            <div class="tile" style="background-image: url('https://via.placeholder.com/500');">
-                <a href="https://www.youtube.com/watch?v=example5" target="_blank">
-                    <span class="tile-title">Heirlooms</span>
-                </a>
-            </div>
+
+        <!-- Individual Tiles -->
+        <div class="tile" style="background-image: url('placeholder1.jpg');">
+            <div class="tile-title">Weddings</div>
+        </div>
+        <div class="tile" style="background-image: url('placeholder2.jpg');">
+            <div class="tile-title">Real Estate</div>
+        </div>
+        <div class="tile" style="background-image: url('placeholder3.jpg');">
+            <div class="tile-title">Events</div>
+        </div>
+        <div class="tile" style="background-image: url('placeholder4.jpg');">
+            <div class="tile-title">Commercials</div>
+        </div>
+        <div class="tile" style="background-image: url('placeholder5.jpg');">
+            <div class="tile-title">Heirlooms</div>
         </div>
     </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
 </body>
 </html>
