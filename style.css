@@ -8,7 +8,8 @@
 body, html {
     font-family: 'Arial', sans-serif;
     height: 100%;
-    overflow: hidden;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    background-color: #000; /* Match your desired background */
 }
 
 /* Navigation Bar */
@@ -16,7 +17,7 @@ body, html {
     position: fixed;
     top: 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.8); /* Slightly transparent black */
     color: white;
     display: flex;
     justify-content: space-between;
@@ -25,28 +26,37 @@ body, html {
     z-index: 1000;
 }
 
+.nav-items {
+    display: flex;
+    gap: 20px;
+}
+
 .nav-items a {
-    color: white;
+    color: white; /* White text for nav items */
     text-decoration: none;
-    margin: 0 15px;
     font-size: 1rem;
-    text-transform: capitalize;
     font-weight: bold;
+    text-transform: capitalize;
+    transition: color 0.3s ease;
 }
 
 .nav-items a:hover {
-    color: #f00; /* Hover color */
+    color: #f00; /* Red hover effect */
+}
+
+.nav-icons {
+    display: flex;
+    gap: 15px;
 }
 
 .nav-icons a {
     color: white;
-    text-decoration: none;
-    margin-left: 15px;
     font-size: 1.5rem;
+    transition: color 0.3s ease;
 }
 
 .nav-icons a:hover {
-    color: #f00;
+    color: #f00; /* Red hover effect */
 }
 
 /* Main Container */
@@ -54,34 +64,37 @@ body, html {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between; /* Add space above and below tiles */
+    justify-content: center;
     height: 100vh;
-    padding: 50px 0; /* White space above and below tiles */
+    padding-top: 80px; /* Add space below the nav bar */
+    padding-bottom: 80px; /* Add white space below the tiles */
     position: relative;
 }
 
 /* Central Text */
 .central-text {
     position: absolute;
-    top: 20px;
-    z-index: 2;
+    top: 10%;
     text-align: center;
-    color: white;
+    z-index: 2;
 }
 
 .central-text h1 {
-    font-size: 5rem;
+    font-size: 4rem;
+    color: white;
     text-transform: uppercase;
     font-weight: bold;
     text-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+    margin-bottom: 20px;
 }
 
-/* Tiles */
+/* Tiles Section */
 .tiles {
     display: grid;
-    grid-template-columns: repeat(5, 1fr); /* 5 Tiles in a row */
-    grid-gap: 20px; /* Add space between tiles */
-    width: 90%; /* Add margin to the tiles */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
+    gap: 20px; /* Add space between tiles */
+    width: 90%; /* Control width of the tile section */
+    max-width: 1200px; /* Prevent tiles from being too wide */
     margin: 0 auto;
 }
 
@@ -89,33 +102,37 @@ body, html {
     position: relative;
     background-size: cover;
     background-position: center;
+    height: 300px; /* Uniform tile height */
+    border-radius: 10px; /* Add slight rounding to tiles */
+    overflow: hidden; /* Ensure content stays inside the tiles */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border-radius: 8px; /* Add slight rounding to match aesthetic */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
 }
 
 .tile:hover {
     transform: scale(1.05); /* Zoom effect */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
 }
 
+/* Tile Titles */
 .tile-title {
     position: absolute;
     bottom: 10px;
     right: 15px;
     color: white;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: bold;
-    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
     text-transform: capitalize;
+    text-shadow: 0 4px 6px rgba(0, 0, 0, 0.4); /* Make text readable */
 }
 
-/* Adjustments for Smaller Screens */
+/* Responsive Adjustments */
 @media (max-width: 768px) {
-    .tiles {
-        grid-template-columns: repeat(2, 1fr); /* 2 Tiles in a row for smaller screens */
+    .central-text h1 {
+        font-size: 2.5rem; /* Adjust text size for smaller screens */
     }
 
-    .central-text h1 {
-        font-size: 3rem; /* Adjust title size for mobile */
+    .tile {
+        height: 200px; /* Smaller tiles for mobile */
     }
 }
