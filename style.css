@@ -138,16 +138,38 @@ body, h1, h2, p, span, a {
     color: #333;
 }
 
+/* Hero Section */
 .hero-images {
     display: flex;
     justify-content: center;
+    align-items: center;
+    position: relative;
     margin-top: 20px;
 }
 
-.hero-images .hero-image {
-    width: 80%; /* Adjust size for the central image */
-    max-width: 600px; /* Limit the max size */
+.hero-image {
+    width: 30%; /* Each image takes up 30% of the container width */
+    max-width: 400px; /* Maximum size for the images */
     border-radius: 10px;
+    transition: transform 0.3s ease; /* Add hover effect transition */
+}
+
+.hero-image.left-image {
+    position: relative;
+    transform: translateX(-20%); /* Move the left image partially offscreen */
+}
+
+.hero-image.right-image {
+    position: relative;
+    transform: translateX(20%); /* Move the right image partially offscreen */
+}
+
+.hero-image:hover {
+    transform: scale(1.05); /* Slightly enlarge image on hover */
+}
+
+.hero-images .main-image {
+    z-index: 1; /* Ensure the main image appears on top */
 }
 
 /* Services Section */
