@@ -211,16 +211,6 @@ body, h1, h2, p, span, a {
     gap: 20px; /* Space between service image and text */
 }
 
-/* Adjust the gap and text width for the first service */
-.services .service:first-of-type {
-    gap: 5px; /* Minimal gap between the image and text */
-}
-
-/* Reduce the width of the text container for the first service */
-.services .service:first-of-type .service-text {
-    width: 50%; /* Decrease the text container's width */
-}
-
 /* Specific styling for the first service image */
 .services .service:first-of-type img {
     position: relative; /* Enable positioning */
@@ -237,6 +227,16 @@ body, h1, h2, p, span, a {
     width: 40%; /* Standard width for service images */
     border-radius: 10px; /* Preserve rounded corners */
     object-fit: cover; /* Maintain aspect ratio */
+}
+
+/* Adjust the gap and text width for the first service */
+.services .service:first-of-type {
+    gap: 5px; /* Minimal gap between the image and text */
+}
+
+/* Reduce the width of the text container for the first service */
+.services .service:first-of-type .service-text {
+    width: 50%; /* Decrease the text container's width */
 }
 
 /* Service text styling */
