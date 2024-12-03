@@ -215,6 +215,13 @@ body, h1, h2, p, span, a {
     border-radius: 10px; /* Rounded corners for service images */
 }
 
+.service img:first-child {
+    position: relative; /* Enable positioning */
+    left: -50%; /* Move the image half off the screen to the left */
+    width: 150%; /* Ensure the image is large enough to cover the desired area */
+    object-fit: cover; /* Maintain the aspect ratio */
+}
+
 .service-text {
     width: 60%; /* Width of the service text container */
 }
