@@ -4,24 +4,105 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Storytime</title>
-    <link rel="stylesheet" href="style.css"> <!-- Link to your main CSS -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;900&display=swap" rel="stylesheet"> <!-- Poppins Font -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"> <!-- Font Awesome -->
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Curved Background -->
-    <div class="curved-background">
-        <!-- Navigation Bar -->
-        <div class="nav-bar">
-            <div class="nav-logo">
+    <div class="curved-background"></div>
+
+    <!-- Navigation Bar -->
+    <nav class="nav-bar">
+        <!-- Logo -->
+        <div class="nav-logo">
+            <img src="img/storytime-logo.png" alt="Storytime Logo">
+        </div>
+        <!-- Navigation Links -->
+        <div class="nav-items">
+            <a href="#">Wedding</a>
+            <a href="#">Real Estate</a>
+            <a href="#">Events</a>
+        </div>
+        <!-- Social Icons -->
+        <div class="nav-icons">
+            <a href="https://www.youtube.com/@storytimevids" target="_blank">
+                <i class="fab fa-youtube"></i>
+            </a>
+            <a href="https://www.instagram.com/storytime.ooo/" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+        <!-- Hamburger Menu -->
+        <div class="hamburger-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <a href="#">Wedding</a>
+        <a href="#">Real Estate</a>
+        <a href="#">Events</a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1 class="hero-title">Telling the Story of Your <span class="highlight">Wedding</span> with Video</h1>
+        <div class="hero-images">
+            <img src="https://via.placeholder.com/400x300" alt="Placeholder Image 1">
+            <img src="https://via.placeholder.com/400x300" alt="Placeholder Image 2">
+            <img src="https://via.placeholder.com/400x300" alt="Placeholder Image 3">
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services">
+        <div class="service">
+            <img src="https://via.placeholder.com/400x300" alt="Wedding Video">
+            <div class="service-text">
+                <h2>We’ll help capture your <span class="highlight">Wedding</span> day.</h2>
+                <p>
+                    No matter your budget, we have a package you’ll love for a budget-friendly option to just capture your ceremony? Check. Want to highlight your entire wedding day? Check.
+                </p>
+                <a href="#" class="button">Pricing</a>
+            </div>
+        </div>
+        <div class="service">
+            <img src="https://via.placeholder.com/400x300" alt="Real Estate Video">
+            <div class="service-text">
+                <h2>Hype up your <span class="highlight">Real Estate</span> listing with a walkthrough video & 3D tour.</h2>
+                <p>
+                    Make your listing the envy of all your realtor buddies and get that house sold with professional video content. We’ll create a walkthrough video and 3D tour that are MLS and client approved.
+                </p>
+                <a href="#" class="button">Pricing</a>
+            </div>
+        </div>
+        <div class="service">
+            <img src="https://via.placeholder.com/400x300" alt="Event Video">
+            <div class="service-text">
+                <h2>Give your attendees the perfect keepsake with an <span class="highlight">Event Highlight</span> video.</h2>
+                <p>
+                    We’ll produce a video that not only highlights all the fun had at your event, but it’ll also be the perfect way to market your event for years to come. Let our videographer capture speaker content, attendee interviews, and the excitement you have planned.
+                </p>
+                <a href="#" class="button">Pricing</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-content">
+            <!-- Footer Logo -->
+            <div class="footer-logo">
                 <img src="img/storytime-logo.png" alt="Storytime Logo">
+                <p>Storytime</p>
             </div>
-            <div class="nav-items">
-                <a href="#">Wedding</a>
-                <a href="#">Real Estate</a>
-                <a href="#">Events</a>
-            </div>
-            <div class="nav-icons">
+            <!-- Footer Button -->
+            <a href="#" class="footer-button">Book a Call</a>
+            <!-- Footer Social Links -->
+            <div class="footer-social">
                 <a href="https://www.youtube.com/@storytimevids" target="_blank">
                     <i class="fab fa-youtube"></i>
                 </a>
@@ -30,72 +111,16 @@
                 </a>
             </div>
         </div>
-    </div>
-    
-    <!-- Hero Section -->
-    <section class="hero">
-        <h1 class="hero-title">TELLING THE STORY OF YOUR <span class="highlight">WEDDING</span> WITH VIDEO</h1>
-        <div class="hero-images">
-            <img src="placeholder-image1.jpg" alt="Wedding">
-            <img src="placeholder-image2.jpg" alt="Real Estate">
-            <img src="placeholder-image3.jpg" alt="Event">
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section class="services">
-        <div class="service">
-            <img src="placeholder-image4.jpg" alt="Service 1">
-            <div class="service-text">
-                <h2>We’ll help capture your wedding day.</h2>
-                <p>
-                    No matter your budget, we have a package you’ll love for a
-                    budget-friendly option to just capture your ceremony? Check.
-                </p>
-                <a href="#" class="button">PRICING</a>
-            </div>
-        </div>
-        <div class="service">
-            <img src="placeholder-image5.jpg" alt="Service 2">
-            <div class="service-text">
-                <h2>Hype up your real estate listing.</h2>
-                <p>
-                    Make your listing the envy of all your realtor buddies with that house sold
-                    with professional video content.
-                </p>
-                <a href="#" class="button">PRICING</a>
-            </div>
-        </div>
-        <div class="service">
-            <img src="placeholder-image6.jpg" alt="Service 3">
-            <div class="service-text">
-                <h2>Give your attendees the perfect keepsake.</h2>
-                <p>
-                    We’ll produce a video that not only highlights all the fun had at your
-                    event but will be the perfect way to market your event.
-                </p>
-                <a href="#" class="button">PRICING</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-logo">
-                <img src="placeholder-footer-logo.svg" alt="Footer Logo">
-                <p>STORYTIME</p>
-            </div>
-            <a href="#" class="footer-button">BOOK A CALL</a>
-            <div class="footer-social">
-                <a href="#"><img src="placeholder-youtube-icon.svg" alt="YouTube"></a>
-                <a href="#"><img src="placeholder-instagram-icon.svg" alt="Instagram"></a>
-            </div>
-        </div>
     </footer>
-</body>
-    
-<script src="script.js"></script>
-    
+
+    <!-- JavaScript for Mobile Menu -->
+    <script>
+        const hamburgerMenu = document.querySelector('.hamburger-menu');
+        const mobileMenu = document.querySelector('.mobile-menu');
+
+        hamburgerMenu.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
