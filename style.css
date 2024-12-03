@@ -204,25 +204,32 @@ body, h1, h2, p, span, a {
     gap: 40px; /* Space between service items */
 }
 
+/* General service styling */
 .service {
     display: flex; /* Arrange service content horizontally */
     align-items: center; /* Align service image and text vertically */
     gap: 20px; /* Space between service image and text */
 }
 
-.service img {
-    width: 40%; /* Width of the service image */
-    border-radius: 10px; /* Rounded corners for service images */
+/* Specific styling for the first service image */
+.services .service:first-of-type img {
+    position: relative; /* Enable positioning for this image */
+    left: -25%; /* Move the image to the left */
+    width: calc(100% + 25%); /* Extend the width for proper coverage */
+    object-fit: cover; /* Maintain the image's aspect ratio */
+    border-radius: 10px; /* Rounded corners for consistency */
+    z-index: 1; /* Ensure it doesn't interfere with text or overlap */
 }
 
-.service img:first-of-type {
-    position: relative; /* Enable custom positioning for this image */
-    left: -25%; /* Shift the image to the left (adjust as needed) */
-    width: 120%; /* Increase the width to ensure proper display */
-    object-fit: cover; /* Maintain the aspect ratio of the image */
-    z-index: 1; /* Ensure it does not interfere with the text layer */
+/* General service image styling (for all other images) */
+.services .service img:not(:first-of-type) {
+    position: static; /* Reset any positioning for other images */
+    width: 40%; /* Standard width for service images */
+    border-radius: 10px; /* Preserve rounded corners */
+    object-fit: cover; /* Maintain aspect ratio */
 }
 
+/* Service text styling */
 .service-text {
     width: 60%; /* Width of the service text container */
 }
@@ -255,7 +262,6 @@ body, h1, h2, p, span, a {
 .button:hover {
     background: #0056b3; /* Darker blue on hover */
 }
-
 /* Footer Section */
 .footer {
     background: #f9f9f9; /* Light gray background for footer */
