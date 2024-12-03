@@ -167,6 +167,35 @@ body, h1, h2, p, span, a {
     z-index: 1; /* Ensure the main image appears on top */
 }
 
+/* Introductory Text Section */
+.intro-text {
+    text-align: center;
+    margin: 40px 20px; /* Adjust spacing around the text */
+}
+
+.intro-line-1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 23px;
+    font-weight: 900; /* Poppins Black */
+    color: #333;
+    text-transform: uppercase;
+    margin-bottom: 15px; /* Space between lines */
+}
+
+.intro-line-1 .highlight-blue {
+    color: #54b1fd; /* Blue for "video" */
+}
+
+.intro-line-2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 17px;
+    font-weight: 400; /* Poppins Regular */
+    color: #333;
+    text-transform: lowercase;
+    line-height: 1.5;
+    margin-top: 0; /* No extra space on top */
+}
+
 /* Services Section */
 .services {
     padding: 40px 20px; /* Padding inside the services section */
