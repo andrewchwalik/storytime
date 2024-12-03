@@ -204,7 +204,7 @@ body, h1, h2, p, span, a {
     gap: 40px; /* Space between service items */
 }
 
-/* General service styling */
+/* Service container */
 .service {
     display: flex; /* Arrange service content horizontally */
     align-items: center; /* Align service image and text vertically */
@@ -213,17 +213,17 @@ body, h1, h2, p, span, a {
 
 /* Specific styling for the first service image */
 .services .service:first-of-type img {
-    position: relative; /* Enable positioning for this image */
-    left: -25%; /* Move the image to the left */
-    width: calc(100% + 25%); /* Extend the width for proper coverage */
-    object-fit: cover; /* Maintain the image's aspect ratio */
+    position: relative; /* Enable positioning */
+    left: -15%; /* Move the image slightly off the screen to the left */
+    width: 45%; /* Reduce the width to prevent it from overpowering the layout */
+    max-width: 500px; /* Ensure it doesn't exceed a reasonable size */
+    object-fit: cover; /* Maintain the aspect ratio */
     border-radius: 10px; /* Rounded corners for consistency */
-    z-index: 1; /* Ensure it doesn't interfere with text or overlap */
 }
 
 /* General service image styling (for all other images) */
 .services .service img:not(:first-of-type) {
-    position: static; /* Reset any positioning for other images */
+    position: static; /* Reset positioning for other images */
     width: 40%; /* Standard width for service images */
     border-radius: 10px; /* Preserve rounded corners */
     object-fit: cover; /* Maintain aspect ratio */
@@ -231,7 +231,7 @@ body, h1, h2, p, span, a {
 
 /* Service text styling */
 .service-text {
-    width: 60%; /* Width of the service text container */
+    width: 55%; /* Reduce width slightly to allow space for the first image */
 }
 
 .service-text h2 {
@@ -249,6 +249,7 @@ body, h1, h2, p, span, a {
     margin-bottom: 20px; /* Space below the paragraph */
 }
 
+/* Button styling */
 .button {
     display: inline-block;
     padding: 10px 20px; /* Padding inside the button */
