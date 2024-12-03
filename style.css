@@ -227,7 +227,7 @@ body, h1, h2, p, span, a {
 /* Specific styling for the first service image */
 .services .service:first-of-type img {
     position: relative; /* Enable positioning */
-    left: -15%; /* Move the image slightly off the screen to the left */
+    left: -5%; /* Move the image slightly off the screen to the left */
     width: 45%; /* Reduce the width to prevent it from overpowering the layout */
     max-width: 500px; /* Ensure it doesn't exceed a reasonable size */
     object-fit: cover; /* Maintain the aspect ratio */
