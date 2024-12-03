@@ -1,162 +1,124 @@
 /* General Reset */
-* {
+body, h1, h2, p, span, a {
     margin: 0;
     padding: 0;
+    font-family: 'Poppins', Arial, sans-serif;
     box-sizing: border-box;
-}
-body {
-    font-family: 'Montserrat', sans-serif;
-    line-height: 1.6;
-    background-color: #fff;
-    color: #333;
+    text-decoration: none;
 }
 
-/* Navbar */
-.navbar {
+/* Curved Background */
+.curved-background {
+    position: relative;
+    width: 100%;
+    height: 150px; /* Adjust height to match the curve depth */
+    background-color: #f8f8f8;
+    border-bottom-left-radius: 100px; /* Creates the subtle curve */
+    border-bottom-right-radius: 100px;
+    z-index: 0; /* Ensure it's behind the nav bar */
+    overflow: hidden;
+}
+
+/* Navigation Bar */
+.nav-bar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 40px;
-    background: white;
+    width: 100%;
+    padding: 15px 20px; /* Add padding for spacing */
     position: fixed;
     top: 0;
-    width: 100%;
-    z-index: 1000;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    background: transparent; /* Transparent background */
+    z-index: 10; /* Keep nav bar on top */
 }
-.nav-links a {
-    margin: 0 15px;
-    text-decoration: none;
+
+/* Logo */
+.nav-logo img {
+    height: 50px; /* Adjust the logo height */
+}
+
+/* Navigation Items */
+.nav-items {
+    display: flex;
+    gap: 20px; /* Space between nav links */
+}
+
+.nav-items a {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900; /* Poppins Black */
+    color: black;
     font-size: 1rem;
-    font-weight: 600;
-    color: #333;
-}
-.social-links img {
-    width: 24px;
-    height: 24px;
-    margin-left: 10px;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
 }
 
-/* Hero Section */
-.hero {
-    text-align: center;
-    padding: 120px 20px 40px;
-}
-.hero-title {
-    font-size: 2.5rem;
-    font-weight: 800;
-    margin-bottom: 20px;
-}
-.hero-title .highlight {
-    color: #54b1fd;
-}
-.hero-images {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 20px;
-}
-.hero-images img {
-    width: 30%;
-    height: auto;
-    border-radius: 10px;
+.nav-items a:hover {
+    color: #54b1fd; /* Blue hover effect */
 }
 
-/* Services Section */
-.services {
-    padding: 40px 20px;
+/* Social Icons */
+.nav-icons {
     display: flex;
-    flex-direction: column;
-    gap: 40px;
+    gap: 15px; /* Space between icons */
 }
-.service {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-.service img {
-    width: 40%;
-    border-radius: 10px;
-}
-.service-text {
-    width: 60%;
-}
-.service-text h2 {
+
+.nav-icons a {
+    color: #54b1fd; /* Match the blue color */
     font-size: 1.5rem;
-    color: #333;
-    margin-bottom: 10px;
-}
-.service-text p {
-    font-size: 1rem;
-    margin-bottom: 20px;
-}
-.button {
-    display: inline-block;
-    padding: 10px 20px;
-    background: #54b1fd;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background 0.3s;
-}
-.button:hover {
-    background: #0056b3;
+    transition: color 0.3s ease;
 }
 
-/* Footer */
-.footer {
-    background: #f9f9f9;
-    padding: 20px 40px;
-    text-align: center;
+.nav-icons a:hover {
+    color: #000; /* Darker hover effect */
 }
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 20px;
+
+/* Hamburger Menu (Mobile) */
+.hamburger-menu {
+    display: none; /* Hidden on desktop */
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #000;
 }
-.footer-logo img {
-    width: 50px;
-    margin-bottom: 10px;
-}
-.footer-logo p {
-    font-size: 1rem;
-    font-weight: 800;
-    color: #54b1fd;
-}
-.footer-button {
-    background: #54b1fd;
-    color: white;
+
+/* Mobile Menu */
+.mobile-menu {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    background: #f8f8f8;
     padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
+    position: absolute;
+    top: 70px; /* Below the nav bar */
+    width: 100%;
+    z-index: 5;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
-.footer-social img {
-    width: 24px;
-    height: 24px;
-    margin-left: 10px;
+
+.mobile-menu a {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;
+    color: black;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 10px 0;
+    transition: color 0.3s ease;
+}
+
+.mobile-menu a:hover {
+    color: #54b1fd;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .navbar {
-        flex-wrap: wrap;
-        padding: 10px;
+    .nav-items {
+        display: none; /* Hide nav items for mobile */
     }
-    .hero-title {
-        font-size: 2rem;
+
+    .hamburger-menu {
+        display: block; /* Show hamburger icon */
     }
-    .hero-images img {
-        width: 100%;
-    }
-    .service {
-        flex-direction: column;
-    }
-    .service img {
-        width: 100%;
-    }
-    .service-text {
-        width: 100%;
+
+    /* Display the mobile menu when triggered */
+    .mobile-menu.active {
+        display: flex;
     }
 }
