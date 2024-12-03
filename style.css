@@ -215,11 +215,12 @@ body, h1, h2, p, span, a {
     border-radius: 10px; /* Rounded corners for service images */
 }
 
-.service img:first-child {
-    position: relative; /* Enable positioning */
-    left: -50%; /* Move the image half off the screen to the left */
-    width: 150%; /* Ensure the image is large enough to cover the desired area */
-    object-fit: cover; /* Maintain the aspect ratio */
+.service img:first-of-type {
+    position: relative; /* Enable custom positioning for this image */
+    left: -25%; /* Shift the image to the left (adjust as needed) */
+    width: 120%; /* Increase the width to ensure proper display */
+    object-fit: cover; /* Maintain the aspect ratio of the image */
+    z-index: 1; /* Ensure it does not interfere with the text layer */
 }
 
 .service-text {
