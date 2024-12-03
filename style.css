@@ -16,20 +16,23 @@ body, h1, h2, p, span, a {
     padding: 15px 20px; /* Adjust spacing for alignment */
     position: fixed;
     top: 0;
-    background: white; /* White background */
+    background: transparent; /* Transparent background */
     z-index: 10; /* Keep nav bar on top */
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 /* Logo */
 .nav-logo img {
-    height: 60px; /* Adjust the logo height */
+    height: 70px; /* Adjust the logo height for better visibility */
 }
 
 /* Navigation Items */
 .nav-items {
     display: flex;
     gap: 30px; /* Space between nav links */
+    margin: auto; /* Center nav links horizontally */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .nav-items a {
@@ -49,11 +52,12 @@ body, h1, h2, p, span, a {
 .nav-icons {
     display: flex;
     gap: 15px; /* Space between icons */
+    margin-left: auto;
 }
 
 .nav-icons a {
     color: #54b1fd; /* Match the blue color */
-    font-size: 1.5rem;
+    font-size: 1.8rem; /* Larger size for better visibility */
     transition: color 0.3s ease;
 }
 
@@ -79,7 +83,6 @@ body, h1, h2, p, span, a {
     top: 70px; /* Below the nav bar */
     width: 100%;
     z-index: 5;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 .mobile-menu a {
