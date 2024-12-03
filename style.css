@@ -219,7 +219,7 @@ body, h1, h2, p, span, a {
 
 /* Adjust the text container for the first service */
 .services .service:first-of-type .service-text {
-    margin-left: -50px; /* Pull text closer to the image */
+    margin-left: -100px; /* Pull text closer to the image */
     width: auto; /* Allow the text container to shrink as needed */
     max-width: 50%; /* Restrict maximum width */
 }
