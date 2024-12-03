@@ -4,56 +4,102 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Storytime</title>
-    <link rel="stylesheet" href="style.css"> <!-- Link to your main CSS -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"> <!-- Font Awesome -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- Navigation Bar -->
-    <nav class="nav-bar">
-        <div class="nav-items">
-            <a href="#">home</a>
-            <a href="#">weddings</a>
-            <a href="#">real estate</a>
-            <a href="#">events</a>
-            <a href="#">commercials</a>
-            <a href="#">heirlooms</a>
+    <header class="nav-bar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="https://via.placeholder.com/50" alt="Storytime Logo">
+                <span>STORYTIME</span>
+            </div>
+            <nav class="nav-links">
+                <a href="#">WEDDING</a>
+                <a href="#">REAL ESTATE</a>
+                <a href="#">EVENTS</a>
+            </nav>
+            <div class="nav-icons">
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
-        <div class="nav-icons">
-            <a href="https://www.youtube.com" target="_blank">
-                <i class="fab fa-youtube"></i>
-            </a>
-            <a href="https://www.instagram.com" target="_blank">
-                <i class="fab fa-instagram"></i>
-            </a>
-        </div>
-    </nav>
+    </header>
 
-    <!-- Tiles Container -->
-    <div class="tiles-container">
-        <!-- Overlay Text -->
-        <div class="overlay">
-            <h1>Storytime</h1>
-        </div>
+    <!-- Main Content -->
+    <main>
+        <section class="hero">
+            <h1>TELLING THE STORY OF YOUR <span>WEDDING</span> WITH VIDEO</h1>
+            <div class="hero-images">
+                <img src="https://via.placeholder.com/500x300" alt="Placeholder Image">
+                <img src="https://via.placeholder.com/500x300" alt="Placeholder Image">
+            </div>
+        </section>
 
-        <!-- Individual Tiles -->
-        <div class="tile" style="background-image: url('placeholder1.jpg');">
-            <div class="tile-title">Weddings</div>
-        </div>
-        <div class="tile" style="background-image: url('placeholder2.jpg');">
-            <div class="tile-title">Real Estate</div>
-        </div>
-        <div class="tile" style="background-image: url('placeholder3.jpg');">
-            <div class="tile-title">Events</div>
-        </div>
-        <div class="tile" style="background-image: url('placeholder4.jpg');">
-            <div class="tile-title">Commercials</div>
-        </div>
-        <div class="tile" style="background-image: url('placeholder5.jpg');">
-            <div class="tile-title">Heirlooms</div>
-        </div>
-    </div>
+        <!-- Content Sections -->
+        <section class="content-section">
+            <div class="content">
+                <img src="https://via.placeholder.com/300x200" alt="Placeholder">
+                <div class="content-text">
+                    <h2>We're a videography company telling stories with <span>VIDEO</span>.</h2>
+                    <p>
+                        We film and produce ceremony & highlight videos for weddings, walkthrough videos & 3D tours for real estate, and promo videos for events.
+                    </p>
+                </div>
+            </div>
+        </section>
 
-    <!-- Scripts -->
-    <script src="script.js"></script>
+        <section class="services">
+            <div class="service">
+                <img src="https://via.placeholder.com/300x200" alt="Placeholder">
+                <h3>We'll capture your <span>WEDDING</span> day.</h3>
+                <p>
+                    Want to capture your special day with a budget-friendly option? Or just your ceremony? Check out what’s available for your perfect wedding day.
+                </p>
+                <button class="pricing-button">Pricing</button>
+            </div>
+            <div class="service">
+                <img src="https://via.placeholder.com/300x200" alt="Placeholder">
+                <h3>Hype up your <span>REAL ESTATE</span> listing.</h3>
+                <p>
+                    Make your listing the envy of your realtor buddies and get that house sold with professional video content.
+                </p>
+                <button class="pricing-button">Pricing</button>
+            </div>
+            <div class="service">
+                <img src="https://via.placeholder.com/300x200" alt="Placeholder">
+                <h3>Give your attendees the perfect <span>EVENT</span> video.</h3>
+                <p>
+                    We’ll produce a video that not only highlights all the fun but is the perfect way to market your event for years to come.
+                </p>
+                <button class="pricing-button">Pricing</button>
+            </div>
+        </section>
+
+        <section class="call-to-action">
+            <p>Our passion is creative content creation. Let us tell your story with video.</p>
+            <button class="call-button">Book a Call</button>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="logo">
+                <img src="https://via.placeholder.com/50" alt="Logo">
+                <span>STORYTIME</span>
+            </div>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
