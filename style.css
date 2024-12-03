@@ -229,14 +229,16 @@ body, h1, h2, p, span, a {
     object-fit: cover; /* Maintain aspect ratio */
 }
 
-/* Adjust the gap and text width for the first service */
+/* Adjust the layout for the first service */
 .services .service:first-of-type {
-    gap: 5px; /* Minimal gap between the image and text */
+    gap: 10px; /* Reduce gap between image and text */
+    align-items: flex-start; /* Align items to the top for better text placement */
 }
 
-/* Reduce the width of the text container for the first service */
+/* Further adjust the text container for the first service */
 .services .service:first-of-type .service-text {
-    width: 50%; /* Decrease the text container's width */
+    width: calc(50% - 10px); /* Ensure the text container is closer to the image */
+    margin-left: -20px; /* Shift text closer to the image */
 }
 
 /* Service text styling */
