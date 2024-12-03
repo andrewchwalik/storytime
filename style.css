@@ -7,49 +7,36 @@ body, h1, h2, p, span, a {
     text-decoration: none;
 }
 
-/* Curved Background */
-.curved-background {
-    position: relative;
-    width: 100%;
-    height: 150px; /* Adjust height to match the curve depth */
-    background-color: #f8f8f8;
-    border-bottom-left-radius: 100px; /* Creates the subtle curve */
-    border-bottom-right-radius: 100px;
-    z-index: 0; /* Ensure it's behind the nav bar */
-    overflow: hidden;
-}
-
 /* Navigation Bar */
 .nav-bar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    padding: 15px 20px; /* Add padding for spacing */
+    padding: 15px 20px; /* Adjust spacing for alignment */
     position: fixed;
     top: 0;
-    background: transparent; /* Transparent background */
+    background: white; /* White background */
     z-index: 10; /* Keep nav bar on top */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 /* Logo */
 .nav-logo img {
-    height: 60px; /* Increase the logo height for better visibility */
+    height: 60px; /* Adjust the logo height */
 }
 
 /* Navigation Items */
 .nav-items {
     display: flex;
-    gap: 30px; /* More space between nav links */
-    flex: 1; /* Allow the nav links to center properly */
-    justify-content: center;
+    gap: 30px; /* Space between nav links */
 }
 
 .nav-items a {
     font-family: 'Poppins', sans-serif;
     font-weight: 900; /* Poppins Black */
     color: black;
-    font-size: 1.2rem; /* Increase font size */
+    font-size: 1.2rem;
     text-transform: uppercase;
     transition: color 0.3s ease;
 }
@@ -62,7 +49,6 @@ body, h1, h2, p, span, a {
 .nav-icons {
     display: flex;
     gap: 15px; /* Space between icons */
-    align-items: center;
 }
 
 .nav-icons a {
@@ -78,7 +64,7 @@ body, h1, h2, p, span, a {
 /* Hamburger Menu (Mobile) */
 .hamburger-menu {
     display: none; /* Hidden on desktop */
-    font-size: 1.8rem; /* Slightly larger for better usability */
+    font-size: 1.5rem;
     cursor: pointer;
     color: #000;
 }
@@ -115,20 +101,24 @@ body, h1, h2, p, span, a {
     text-align: center;
     padding: 120px 20px 40px;
 }
+
 .hero-title {
     font-size: 2.5rem;
     font-weight: 800;
     margin-bottom: 20px;
 }
+
 .hero-title .highlight {
-    color: #54b1fd;
+    color: #54b1fd; /* Highlighted blue */
 }
+
 .hero-images {
     display: flex;
     justify-content: center;
     gap: 10px;
     margin-top: 20px;
 }
+
 .hero-images img {
     width: 30%;
     height: auto;
@@ -142,27 +132,37 @@ body, h1, h2, p, span, a {
     flex-direction: column;
     gap: 40px;
 }
+
 .service {
     display: flex;
     align-items: center;
     gap: 20px;
 }
+
 .service img {
     width: 40%;
     border-radius: 10px;
 }
+
 .service-text {
     width: 60%;
 }
+
 .service-text h2 {
     font-size: 1.5rem;
     color: #333;
     margin-bottom: 10px;
 }
+
+.service-text .highlight {
+    color: #54b1fd; /* Highlighted blue */
+}
+
 .service-text p {
     font-size: 1rem;
     margin-bottom: 20px;
 }
+
 .button {
     display: inline-block;
     padding: 10px 20px;
@@ -172,16 +172,18 @@ body, h1, h2, p, span, a {
     border-radius: 5px;
     transition: background 0.3s;
 }
+
 .button:hover {
     background: #0056b3;
 }
 
-/* Footer */
+/* Footer Section */
 .footer {
     background: #f9f9f9;
     padding: 20px 40px;
     text-align: center;
 }
+
 .footer-content {
     display: flex;
     justify-content: space-between;
@@ -189,15 +191,18 @@ body, h1, h2, p, span, a {
     flex-wrap: wrap;
     gap: 20px;
 }
+
 .footer-logo img {
     width: 50px;
     margin-bottom: 10px;
 }
+
 .footer-logo p {
     font-size: 1rem;
     font-weight: 800;
     color: #54b1fd;
 }
+
 .footer-button {
     background: #54b1fd;
     color: white;
@@ -205,10 +210,16 @@ body, h1, h2, p, span, a {
     border-radius: 5px;
     text-decoration: none;
 }
-.footer-social img {
-    width: 24px;
-    height: 24px;
+
+.footer-social a {
+    color: #54b1fd;
+    font-size: 1.5rem;
     margin-left: 10px;
+    transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+    color: #0056b3;
 }
 
 /* Responsive Design */
@@ -226,7 +237,16 @@ body, h1, h2, p, span, a {
         display: flex;
     }
 
-    .nav-icons {
-        justify-content: flex-end; /* Adjust social icons for mobile */
+    .service {
+        flex-direction: column; /* Stack services vertically on mobile */
+    }
+
+    .service img {
+        width: 100%; /* Full width images on mobile */
+    }
+
+    .service-text {
+        width: 100%; /* Full width text on mobile */
+        text-align: center;
     }
 }
