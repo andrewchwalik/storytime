@@ -211,16 +211,17 @@ body, h1, h2, p, span, a {
     gap: 20px; /* Space between service image and text */
 }
 
-/* Adjust the layout for the first service */
+/* Adjust layout for the first service */
 .services .service:first-of-type {
-    gap: 10px; /* Reduce gap between image and text */
-    align-items: flex-start; /* Align items to the top for better text placement */
+    gap: 0; /* Remove gap between image and text */
+    align-items: center; /* Align items vertically for better balance */
 }
 
-/* Further adjust the text container for the first service */
+/* Adjust the text container for the first service */
 .services .service:first-of-type .service-text {
-    width: calc(50% - 10px); /* Ensure the text container is closer to the image */
-    margin-left: -20px; /* Shift text closer to the image */
+    margin-left: -50px; /* Pull text closer to the image */
+    width: auto; /* Allow the text container to shrink as needed */
+    max-width: 50%; /* Restrict maximum width */
 }
 
 /* Specific styling for the first service image */
