@@ -211,9 +211,14 @@ body, h1, h2, p, span, a {
     gap: 20px; /* Space between service image and text */
 }
 
-/* Adjust the gap between the first image and text */
+/* Adjust the gap and text width for the first service */
 .services .service:first-of-type {
-    gap: 0px; /* Reduce the gap between the image and text */
+    gap: 5px; /* Minimal gap between the image and text */
+}
+
+/* Reduce the width of the text container for the first service */
+.services .service:first-of-type .service-text {
+    width: 50%; /* Decrease the text container's width */
 }
 
 /* Specific styling for the first service image */
