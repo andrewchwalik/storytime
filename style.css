@@ -148,7 +148,7 @@ body, h1, h2, p, span, a {
 }
 
 .hero-image {
-    width: 50%; /* Each image takes up 30% of the container width */
+    width: 70%; /* Each image takes up 30% of the container width */
     max-width: 400px; /* Maximum size for the images */
     border-radius: 10px;
     transition: transform 0.3s ease; /* Add hover effect transition */
@@ -156,12 +156,10 @@ body, h1, h2, p, span, a {
 
 .hero-image.left-image {
     position: relative;
-    transform: translateX(-20%); /* Move the left image partially offscreen */
 }
 
 .hero-image.right-image {
     position: relative;
-    transform: translateX(20%); /* Move the right image partially offscreen */
 }
 
 .hero-image:hover {
