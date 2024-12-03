@@ -1,24 +1,24 @@
-/* General Reset */
+/* General Reset: Resets margins, paddings, and default styling for consistency */
 body, h1, h2, p, span, a {
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', Arial, sans-serif;
-    box-sizing: border-box;
-    text-decoration: none;
+    font-family: 'Poppins', Arial, sans-serif; /* Use Poppins font for all text */
+    box-sizing: border-box; /* Include padding and border in element's total size */
+    text-decoration: none; /* Remove underlines for links */
 }
 
 /* Navigation Bar */
 .nav-bar {
     display: flex;
     justify-content: space-between; /* Space between logo and right-side content */
-    align-items: center;
-    width: 100%;
-    padding: 15px 20px; /* Adjust spacing for alignment */
-    position: fixed;
+    align-items: center; /* Center items vertically */
+    width: 100%; /* Full width navigation bar */
+    padding: 15px 20px; /* Padding inside the nav bar */
+    position: fixed; /* Fix position at the top */
     top: 0;
     left: 0;
-    background: transparent; /* Transparent background */
-    z-index: 10; /* Keep nav bar on top */
+    background: transparent; /* Transparent background for nav bar */
+    z-index: 10; /* Place nav bar above other elements */
 }
 
 /* Logo */
@@ -29,46 +29,42 @@ body, h1, h2, p, span, a {
 /* Navigation Items */
 .nav-items {
     display: flex;
-    gap: 30px; /* Space between nav links */
+    gap: 60px; /* Space between navigation links */
     margin: auto; /* Center nav links horizontally */
     position: absolute;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%); /* Center nav items */
 }
 
 .nav-items a {
     font-family: 'Poppins', sans-serif;
-    font-weight: 900; /* Poppins Black */
+    font-weight: 900; /* Poppins Black for bold text */
     color: black;
-    font-size: 1.2rem;
-    text-transform: uppercase;
-    transition: color 0.3s ease;
+    font-size: 1.2rem; /* Font size for nav links */
+    text-transform: uppercase; /* Uppercase text styling */
+    transition: color 0.3s ease; /* Smooth color transition on hover */
 }
 
 .nav-items a:hover {
-    color: #54b1fd; /* Blue hover effect */
+    color: #54b1fd; /* Blue hover effect for nav links */
 }
 
 /* Social Icons */
 .nav-icons {
     display: flex;
-    gap: 15px; /* Space between icons */
+    gap: 15px; /* Space between social icons */
     position: relative;
+    margin-right: 45px; /* Padding from the right edge of the viewport */
 }
 
 .nav-icons a {
     color: #54b1fd; /* Match the blue color */
     font-size: 1.8rem; /* Larger size for better visibility */
-    transition: color 0.3s ease;
+    transition: color 0.3s ease; /* Smooth color transition on hover */
 }
 
 .nav-icons a:hover {
-    color: #000; /* Darker hover effect */
-}
-
-/* Ensure icons stay within bounds */
-.nav-icons {
-    margin-right: 20px; /* Padding from the right edge of the viewport */
+    color: #000; /* Darker hover effect for social icons */
 }
 
 /* Hamburger Menu (Mobile) */
@@ -83,152 +79,189 @@ body, h1, h2, p, span, a {
 .mobile-menu {
     display: none; /* Hidden by default */
     flex-direction: column;
-    background: #f8f8f8;
-    padding: 10px 20px;
+    background: #f8f8f8; /* Light gray background for mobile menu */
+    padding: 10px 20px; /* Spacing inside the mobile menu */
     position: absolute;
     top: 70px; /* Below the nav bar */
     width: 100%;
-    z-index: 5;
+    z-index: 5; /* Ensure it appears above other elements */
 }
 
 .mobile-menu a {
     font-family: 'Poppins', sans-serif;
-    font-weight: 900;
+    font-weight: 900; /* Bold text for links */
     color: black;
-    text-transform: uppercase;
+    text-transform: uppercase; /* Uppercase text styling */
     text-align: center;
-    margin: 10px 0;
-    transition: color 0.3s ease;
+    margin: 10px 0; /* Space between mobile menu links */
+    transition: color 0.3s ease; /* Smooth color transition on hover */
 }
 
 .mobile-menu a:hover {
-    color: #54b1fd;
+    color: #54b1fd; /* Blue hover effect for mobile menu links */
 }
 
-/* Hero Section */
+/* Hero Section Text */
 .hero {
-    text-align: center;
-    padding: 120px 20px 40px;
+    text-align: center; /* Center all content inside the hero section */
+    padding: 180px 20px 40px; /* Adjust padding for spacing */
 }
 
 .hero-title {
-    font-size: 2.5rem;
-    font-weight: 800;
-    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+    margin-bottom: 100px; /* Space below the text */
+    line-height: .65; /* Reduced line height for tighter text grouping */
 }
 
-.hero-title .highlight {
-    color: #54b1fd; /* Highlighted blue */
+.hero-line-1 {
+    font-weight: 400; /* Poppins Regular */
+    font-size: 1.8rem; /* Font size for the first line */
+    display: block; /* Each line as a block */
+    color: #333; /* Dark gray color */
 }
 
+.hero-line-2 {
+    font-weight: 900; /* Poppins Black */
+    font-size: 5rem; /* Large font size for emphasis */
+    display: block;
+    color: #54b1fd; /* Blue text color */
+}
+
+.hero-line-3 {
+    font-weight: 400; /* Poppins Regular */
+    font-size: 1.8rem;
+    display: block;
+    color: #333; /* Dark gray color */
+}
+
+/* Hero Section Images */
 .hero-images {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 20px;
+    display: flex; /* Arrange images in a row */
+    justify-content: center; /* Center the images horizontally */
+    align-items: center; /* Align images vertically */
+    position: relative; /* Allow positioned elements inside */
+    margin-top: 20px; /* Space above the images */
+    gap: 10px; /* Add spacing between the images */
 }
 
-.hero-images img {
-    width: 30%;
-    height: auto;
-    border-radius: 10px;
+.hero-image {
+    width: 55%; /* Each image takes up 30% of the container width */
+    max-width: 550px; /* Maximum size for the images */
+    border-radius: 10px; /* Rounded corners for images */
+    transition: transform 0.3s ease; /* Smooth scaling effect on hover */
+}
+
+.hero-image.left-image {
+    position: relative; /* Positioned for adjustments if necessary */
+}
+
+.hero-image.right-image {
+    position: relative;
+}
+
+.hero-image:hover {
+    transform: scale(1.05); /* Slightly enlarge image on hover */
+}
+
+.hero-images .main-image {
+    z-index: 1; /* Ensure the main image appears on top */
 }
 
 /* Services Section */
 .services {
-    padding: 40px 20px;
+    padding: 40px 20px; /* Padding inside the services section */
     display: flex;
-    flex-direction: column;
-    gap: 40px;
+    flex-direction: column; /* Stack services vertically */
+    gap: 40px; /* Space between service items */
 }
 
 .service {
-    display: flex;
-    align-items: center;
-    gap: 20px;
+    display: flex; /* Arrange service content horizontally */
+    align-items: center; /* Align service image and text vertically */
+    gap: 20px; /* Space between service image and text */
 }
 
 .service img {
-    width: 40%;
-    border-radius: 10px;
+    width: 40%; /* Width of the service image */
+    border-radius: 10px; /* Rounded corners for service images */
 }
 
 .service-text {
-    width: 60%;
+    width: 60%; /* Width of the service text container */
 }
 
 .service-text h2 {
-    font-size: 1.5rem;
-    color: #333;
-    margin-bottom: 10px;
+    font-size: 1.5rem; /* Font size for service heading */
+    color: #333; /* Dark gray color */
+    margin-bottom: 10px; /* Space below the heading */
 }
 
 .service-text .highlight {
-    color: #54b1fd; /* Highlighted blue */
+    color: #54b1fd; /* Highlighted blue text */
 }
 
 .service-text p {
-    font-size: 1rem;
-    margin-bottom: 20px;
+    font-size: 1rem; /* Font size for service paragraph */
+    margin-bottom: 20px; /* Space below the paragraph */
 }
 
 .button {
     display: inline-block;
-    padding: 10px 20px;
-    background: #54b1fd;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background 0.3s;
+    padding: 10px 20px; /* Padding inside the button */
+    background: #54b1fd; /* Blue background for button */
+    color: white; /* White text color */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Rounded corners for button */
+    transition: background 0.3s; /* Smooth background color transition */
 }
 
 .button:hover {
-    background: #0056b3;
+    background: #0056b3; /* Darker blue on hover */
 }
 
 /* Footer Section */
 .footer {
-    background: #f9f9f9;
-    padding: 20px 40px;
-    text-align: center;
+    background: #f9f9f9; /* Light gray background for footer */
+    padding: 20px 40px; /* Padding inside the footer */
+    text-align: center; /* Center text content */
 }
 
 .footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 20px;
+    display: flex; /* Arrange footer items horizontally */
+    justify-content: space-between; /* Space between items */
+    align-items: center; /* Align footer items vertically */
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    gap: 20px; /* Space between footer items */
 }
 
 .footer-logo img {
-    width: 50px;
-    margin-bottom: 10px;
+    width: 50px; /* Logo size */
+    margin-bottom: 10px; /* Space below the logo */
 }
 
 .footer-logo p {
-    font-size: 1rem;
-    font-weight: 800;
-    color: #54b1fd;
+    font-size: 1rem; /* Font size for logo text */
+    font-weight: 800; /* Bold text for emphasis */
+    color: #54b1fd; /* Blue text color */
 }
 
 .footer-button {
-    background: #54b1fd;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
+    background: #54b1fd; /* Blue background */
+    color: white; /* White text */
+    padding: 10px 20px; /* Padding inside the button */
+    border-radius: 5px; /* Rounded corners for button */
+    text-decoration: none; /* Remove underline */
 }
 
 .footer-social a {
-    color: #54b1fd;
-    font-size: 1.5rem;
-    margin-left: 10px;
-    transition: color 0.3s ease;
+    color: #54b1fd; /* Blue text color */
+    font-size: 1.5rem; /* Larger font size for social icons */
+    margin-left: 10px; /* Space between icons */
+    transition: color 0.3s ease; /* Smooth color transition */
 }
 
 .footer-social a:hover {
-    color: #0056b3;
+    color: #0056b3; /* Darker blue on hover */
 }
 
 /* Responsive Design */
