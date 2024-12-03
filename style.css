@@ -147,7 +147,7 @@ body, h1, h2, p, span, a {
 .hero-image {
     width: 55%; /* Each image takes up 30% of the container width */
     max-width: 550px; /* Maximum size for the images */
-    border-radius: 10px; /* Rounded corners for images */
+    border-radius: 30px; /* Rounded corners for images */
     transition: transform 0.3s ease; /* Smooth scaling effect on hover */
 }
 
