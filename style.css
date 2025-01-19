@@ -134,8 +134,9 @@ body, h1, h2, p, span, a {
     color: white; /* White text */
     text-transform: uppercase;
     text-align: center;
-    margin-top: 3px; /* Spacing below the main title */
+    margin-top: -10px; /* Spacing below the main title */
     letter-spacing: 2px; /* Adds spacing for a sleek look */
+    position: relative; /* Ensure proper positioning */
 }
 
 /* Ensure the slider container takes full width and centers its content */
