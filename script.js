@@ -3,23 +3,25 @@ document.addEventListener("DOMContentLoaded", function () {
     const slides = document.querySelectorAll(".slide");
     let index = 0;
 
-    if (slides.length > 0) {
-        slides[0].classList.add("active"); // Ensure first slide is visible
-    }
-
     function nextSlide() {
-        if (slides.length < 2) return; // Prevent errors if there's only one image
-
-        // Remove active class from current slide
+        // Remove the active class from the current slide and move it left
         slides[index].classList.remove("active");
         slides[index].classList.add("prev"); // Move current slide off to the left
 
-        // Update index for the next slide
+        // Update the index for the next slide
         index = (index + 1) % slides.length;
 
-        // Remove "prev" class from the next slide before making it active
-        slides[index].classList.remove("prev");
+        // Reset all slides (to ensure they are positioned off-screen before entering)
+        slides.forEach((slide, i) => {
+            if (i !== index) {
+                slide.classList.remove("active", "prev");
+                slide.style.transform = "translateX(100%)"; // Reset position (off-screen right)
+            }
+        });
+
+        // Make the next slide active and move it into position
         slides[index].classList.add("active");
+        slides[index].style.transform = "translateX(0)"; // Move into view
     }
 
     // Change image every 4 seconds
