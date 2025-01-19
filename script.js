@@ -4,23 +4,25 @@ document.addEventListener("DOMContentLoaded", function () {
     let index = 0;
 
     function nextSlide() {
-        // Move the current slide off to the left
+        // Move the current slide off-screen to the left
         slides[index].classList.remove("active");
-        slides[index].classList.add("prev"); 
-        slides[index].style.transform = "translateX(-100%)"; // Moves left
+        slides[index].classList.add("prev");
+        slides[index].style.transform = "translateX(-100%)"; // Move off to the left
 
-        // Update index for the next slide
-        index = (index + 1) % slides.length;
+        // Update the index for the next slide
+        let nextIndex = (index + 1) % slides.length;
 
-        // Reset next slide position (place it off-screen to the right before it enters)
-        slides[index].classList.remove("prev");
-        slides[index].style.transform = "translateX(100%)"; // Reset position (off-screen right)
+        // Reset next slide to start position (off-screen right) before moving in
+        slides[nextIndex].classList.remove("prev");
+        slides[nextIndex].style.transform = "translateX(100%)"; // Reset position to right
 
-        // Delay adding active class slightly to prevent flickering
+        // Add active class with a slight delay to prevent flickering
         setTimeout(() => {
-            slides[index].classList.add("active");
-            slides[index].style.transform = "translateX(0)"; // Move into view
+            slides[nextIndex].classList.add("active");
+            slides[nextIndex].style.transform = "translateX(0)"; // Move to center
         }, 50);
+
+        index = nextIndex; // Update index for next iteration
     }
 
     // Change slide every 4 seconds
