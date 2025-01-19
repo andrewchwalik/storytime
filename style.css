@@ -105,31 +105,38 @@ body, h1, h2, p, span, a {
 .hero {
     position: relative;
     width: 100%;
-    overflow: hidden; /* Prevents images from overflowing */
-    margin-top: 80px; /* Adds space between the nav bar and images */
+    height: 80vh; /* Adjusted for better spacing */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 80px; /* Space below the nav bar */
+    overflow: hidden; /* Prevent overflow */
 }
 
 /* Hero Slider Container */
 .hero-slider {
     display: flex;
-    width: 300vw; /* Ensures all slides fit horizontally */
-    transition: transform 0.5s ease-in-out;
-}
-
-/* Individual Slide */
-.slide {
-    min-width: 100vw; /* Each slide takes full width */
-    height: 60vh; /* Adjust height to prevent images from being too large */
-    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100%;
     justify-content: center;
     align-items: center;
 }
 
-/* Slide Images */
-.slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensures images are scaled properly */
+/* Individual Slide */
+.slide {
+    position: absolute;
+    width: auto; /* Keep the original width */
+    height: auto; /* Keep the original height */
+    max-width: 100%; /* Ensure it doesn't exceed container width */
+    max-height: 100%; /* Ensure it doesn't exceed container height */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 1s ease-in-out;
+}
+
+/* Make the active slide visible */
+.slide.active {
+    opacity: 1;
 }
 
 /* Introductory Text Section */
