@@ -101,70 +101,28 @@ body, h1, h2, p, span, a {
     color: #0dace8; /* Blue hover effect for mobile menu links */
 }
 
-/* Hero Section Text */
+/* Hero Section */
 .hero {
-    text-align: center; /* Center all content inside the hero section */
-    padding: 180px 20px 40px; /* Adjust padding for spacing */
-}
-
-.hero-title {
-    font-family: 'Poppins', sans-serif;
-    margin-bottom: 100px; /* Space below the text */
-    line-height: .65; /* Reduced line height for tighter text grouping */
-}
-
-.hero-line-1 {
-    font-weight: 400; /* Poppins Regular */
-    font-size: 1.8rem; /* Font size for the first line */
-    display: block; /* Each line as a block */
-    color: #333; /* Dark gray color */
-}
-
-.hero-line-2 {
-    font-weight: 900; /* Poppins Black */
-    font-size: 5rem; /* Large font size for emphasis */
-    display: block;
-    color: #0dace8; /* Blue text color */
-}
-
-.hero-line-3 {
-    font-weight: 400; /* Poppins Regular */
-    font-size: 1.8rem;
-    display: block;
-    color: #333; /* Dark gray color */
-}
-
-/* Hero Section Images */
-.hero-images {
-    display: flex; /* Arrange images in a row */
-    justify-content: center; /* Center the images horizontally */
-    align-items: center; /* Align images vertically */
-    position: relative; /* Allow positioned elements inside */
-    margin-top: 20px; /* Space above the images */
-    gap: 10px; /* Add spacing between the images */
-}
-
-.hero-image {
-    width: 55%; /* Each image takes up 30% of the container width */
-    max-width: 550px; /* Maximum size for the images */
-    border-radius: 30px; /* Rounded corners for images */
-    transition: transform 0.3s ease; /* Smooth scaling effect on hover */
-}
-
-.hero-image.left-image {
-    position: relative; /* Positioned for adjustments if necessary */
-}
-
-.hero-image.right-image {
     position: relative;
+    width: 100%;
+    height: 400px; /* Adjust height as needed */
+    overflow: hidden;
 }
 
-.hero-image:hover {
-    transform: scale(1.05); /* Slightly enlarge image on hover */
+/* Slider Container */
+.hero-slider {
+    position: absolute;
+    width: 300%; /* 3 images wide */
+    height: 100%;
+    display: flex;
+    transition: transform 1s ease-in-out;
 }
 
-.hero-images .main-image {
-    z-index: 1; /* Ensure the main image appears on top */
+/* Individual Slides */
+.slide {
+    width: 100vw; /* Full viewport width */
+    height: 100%;
+    object-fit: cover; /* Ensure full coverage */
 }
 
 /* Introductory Text Section */
