@@ -8,25 +8,26 @@ document.addEventListener("DOMContentLoaded", function () {
         let nextIndex = (index + 1) % slides.length;
         let nextSlide = slides[nextIndex];
 
-        // Move the current slide off-screen to the left
-        currentSlide.classList.remove("active");
-        currentSlide.classList.add("prev");
-        currentSlide.style.transform = "translateX(-100%)"; // Slide out to the left
+        // Move the current slide out to the left
+        currentSlide.style.transition = "transform 1s ease-in-out, opacity 1s ease-in-out";
+        currentSlide.style.transform = "translateX(-100%)";
+        currentSlide.style.opacity = "0";
 
-        // Reset the next slide's position (off-screen right) before making it active
-        nextSlide.classList.remove("prev");
-        nextSlide.style.transform = "translateX(100%)"; // Reset position to right
+        // Reset the next slide's position (off-screen right)
+        nextSlide.style.transition = "none"; // Temporarily remove transition
+        nextSlide.style.transform = "translateX(100%)"; // Move off-screen right
 
-        // Delay adding the 'active' class to prevent flickering
+        // Wait for a tiny delay before adding the transition back (prevents flickering)
         setTimeout(() => {
-            nextSlide.classList.add("active");
-            nextSlide.style.transform = "translateX(0)"; // Move into the center
+            nextSlide.style.transition = "transform 1s ease-in-out, opacity 1s ease-in-out";
+            nextSlide.style.transform = "translateX(0)"; // Move into view
+            nextSlide.style.opacity = "1";
         }, 50);
 
         index = nextIndex; // Update the index for the next transition
     }
 
-    // Change slide every 4 seconds
+    // Start the slide transition every 4 seconds
     setInterval(nextSlide, 4000);
 });
 
