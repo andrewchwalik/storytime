@@ -1,17 +1,23 @@
-// Home Page Header JAVA
+// Home Page Header - Image Slideshow
 document.addEventListener("DOMContentLoaded", function () {
     const slides = document.querySelectorAll(".slide");
     let index = 0;
 
+    if (slides.length > 0) {
+        slides[0].classList.add("active"); // Ensure first slide is visible
+    }
+
     function nextSlide() {
-        // Remove the active class from the current slide
+        if (slides.length < 2) return; // Prevent errors if there's only one image
+
+        // Remove active class from current slide
         slides[index].classList.remove("active");
         slides[index].classList.add("prev"); // Move current slide off to the left
 
-        // Update the index for the next slide
+        // Update index for the next slide
         index = (index + 1) % slides.length;
 
-        // Make the next slide active and move it into position
+        // Remove "prev" class from the next slide before making it active
         slides[index].classList.remove("prev");
         slides[index].classList.add("active");
     }
@@ -20,9 +26,14 @@ document.addEventListener("DOMContentLoaded", function () {
     setInterval(nextSlide, 4000);
 });
 
-
-// Mobile JAVA
-document.querySelector('.hamburger-menu').addEventListener('click', () => {
+// Mobile Navigation Menu Toggle
+document.addEventListener("DOMContentLoaded", function () {
+    const hamburgerMenu = document.querySelector('.hamburger-menu');
     const mobileMenu = document.querySelector('.mobile-menu');
-    mobileMenu.classList.toggle('active'); // Toggle visibility of the menu
+
+    if (hamburgerMenu && mobileMenu) {
+        hamburgerMenu.addEventListener('click', () => {
+            mobileMenu.classList.toggle('active'); // Toggle visibility of the menu
+        });
+    }
 });
