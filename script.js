@@ -4,25 +4,26 @@ document.addEventListener("DOMContentLoaded", function () {
     let index = 0;
 
     function nextSlide() {
-        // Move the current slide off-screen to the left
-        slides[index].classList.remove("active");
-        slides[index].classList.add("prev");
-        slides[index].style.transform = "translateX(-100%)"; // Move off to the left
-
-        // Update the index for the next slide
+        let currentSlide = slides[index];
         let nextIndex = (index + 1) % slides.length;
+        let nextSlide = slides[nextIndex];
 
-        // Reset next slide to start position (off-screen right) before moving in
-        slides[nextIndex].classList.remove("prev");
-        slides[nextIndex].style.transform = "translateX(100%)"; // Reset position to right
+        // Move the current slide off-screen to the left
+        currentSlide.classList.remove("active");
+        currentSlide.classList.add("prev");
+        currentSlide.style.transform = "translateX(-100%)"; // Slide out to the left
 
-        // Add active class with a slight delay to prevent flickering
+        // Reset the next slide's position (off-screen right) before making it active
+        nextSlide.classList.remove("prev");
+        nextSlide.style.transform = "translateX(100%)"; // Reset position to right
+
+        // Delay adding the 'active' class to prevent flickering
         setTimeout(() => {
-            slides[nextIndex].classList.add("active");
-            slides[nextIndex].style.transform = "translateX(0)"; // Move to center
+            nextSlide.classList.add("active");
+            nextSlide.style.transform = "translateX(0)"; // Move into the center
         }, 50);
 
-        index = nextIndex; // Update index for next iteration
+        index = nextIndex; // Update the index for the next transition
     }
 
     // Change slide every 4 seconds
