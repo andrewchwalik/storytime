@@ -105,38 +105,44 @@ body, h1, h2, p, span, a {
 .hero {
     position: relative;
     width: 100%;
-    height: 80vh; /* Adjusted for better spacing */
+    height: 80vh; /* Adjust height */
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 80px; /* Space below the nav bar */
-    overflow: hidden; /* Prevent overflow */
+    margin-top: 80px; /* Space from navbar */
+    overflow: hidden; /* Prevents overflow */
 }
 
 /* Hero Slider Container */
 .hero-slider {
-    display: flex;
     position: relative;
     width: 100%;
     height: 100%;
-    justify-content: center;
-    align-items: center;
+    display: flex;
 }
 
 /* Individual Slide */
 .slide {
     position: absolute;
-    width: auto; /* Keep the original width */
-    height: auto; /* Keep the original height */
-    max-width: 100%; /* Ensure it doesn't exceed container width */
-    max-height: 100%; /* Ensure it doesn't exceed container height */
-    opacity: 0; /* Initially hidden */
-    transition: opacity 1s ease-in-out;
+    width: auto; /* Maintain original width */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 100%;
+    max-height: 100%;
+    opacity: 0;
+    transform: translateX(100%); /* Start off-screen to the right */
+    transition: transform 1s ease-in-out, opacity 1s ease-in-out;
 }
 
-/* Make the active slide visible */
+/* Active Slide */
 .slide.active {
     opacity: 1;
+    transform: translateX(0); /* Move into view */
+}
+
+/* Previous Slide (Exit Animation) */
+.slide.prev {
+    opacity: 0;
+    transform: translateX(-100%); /* Move off-screen to the left */
 }
 
 /* Introductory Text Section */
