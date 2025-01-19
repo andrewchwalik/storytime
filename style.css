@@ -126,6 +126,18 @@ body, h1, h2, p, span, a {
     pointer-events: none; /* Prevent interaction */
 }
 
+/* Subtitle Under "STORYTIME" */
+.hero-subtext {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400; /* Regular weight */
+    font-size: 1.5rem; /* Smaller than the main title */
+    color: white; /* White text */
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 10px; /* Spacing below the main title */
+    letter-spacing: 2px; /* Adds spacing for a sleek look */
+}
+
 /* Ensure the slider container takes full width and centers its content */
 .hero-slider {
     position: relative;
