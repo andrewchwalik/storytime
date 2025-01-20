@@ -311,7 +311,7 @@ body, h1, h2, p, span, a {
     font-family: 'Poppins', sans-serif;
     font-size: 12vw; /* Responsive font size */
     font-weight: 900;
-    color: #d3d3d3; /* Light gray */
+    color: #f9f9f9; /* Light gray */
     text-transform: uppercase;
     text-align: center;
     letter-spacing: -2px; /* Slightly reduce spacing for better fit */
