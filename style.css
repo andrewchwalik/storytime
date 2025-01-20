@@ -294,7 +294,7 @@ body, h1, h2, p, span, a {
 .footer {
     position: relative;
     background: #f9f9f9; /* Light gray background */
-    padding: 80px 20px 40px; /* Reduced top padding */
+    padding: 40px 20px 40px; /* Reduced top padding */
     text-align: center;
     display: flex;
     justify-content: center;
