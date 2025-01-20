@@ -305,7 +305,7 @@ body, h1, h2, p, span, a {
 .footer::before {
     content: "";
     position: absolute;
-    top: -50px; /* Adjust to control the curve height */
+    top: -60px; /* Adjust to control the curve height */
     left: 0;
     width: 100%;
     height: 100px; /* Height of the curve */
