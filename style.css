@@ -332,9 +332,13 @@ body, h1, h2, p, span, a {
 .footer-middle {
     display: flex;
     justify-content: center; /* Center the middle columns */
-    align-items: center;
-    flex: 2; /* Give it enough space in the layout */
-    gap: 80px; /* Space between the two middle columns */
+    gap: 100px; /* Space between the middle columns */
+    flex: 2;
+}
+
+.footer-column {
+    flex: 1;
+    text-align: left; /* Keep text aligned left */
 }
 
 /* Middle Columns: Page Links & Other Links */
