@@ -293,31 +293,32 @@ body, h1, h2, p, span, a {
 /* Footer Section */
 .footer {
     position: relative;
-    background: transparent; /* No background color */
-    padding: 80px 20px 200px; /* Extra padding at the bottom to make space */
+    background: none; /* Remove any background color */
+    padding: 40px 20px 0; /* Remove bottom padding */
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    min-height: 100vh; /* Ensures footer fills the screen properly */
 }
 
-/* Large "STORYTIME" text spanning full width */
+/* Large "STORYTIME" text spanning full width at the very bottom */
 .footer-wordmark {
-    position: absolute;
-    bottom: -30px; /* Moves it slightly below the footer */
+    position: fixed; /* Ensures it stays at the bottom */
+    bottom: 0; /* Aligns it to the very bottom of the viewport */
     left: 0;
     width: 100%;
     font-family: 'Poppins', sans-serif;
-    font-size: 18vw; /* Responsive font size */
+    font-size: 12vw; /* Responsive font size */
     font-weight: 900;
-    color: #f9f9f9; /* Light gray text */
+    color: #f9f9f9; /* Light gray */
     text-transform: uppercase;
     text-align: center;
     letter-spacing: -2px; /* Slightly reduce spacing for better fit */
-    z-index: -1; /* Ensure it’s behind footer content */
-    white-space: nowrap; /* Prevent line breaks */
-    overflow: hidden; /* Prevents it from overflowing */
+    z-index: -1; /* Keeps it behind other content */
+    line-height: 1; /* Removes any extra line spacing */
+    overflow: hidden; /* Prevents any extra space */
 }
 
 /* Footer Content Layout */
@@ -326,9 +327,10 @@ body, h1, h2, p, span, a {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    max-width: 1200px; /* Prevent content from stretching too wide */
+    max-width: 1200px;
     position: relative;
-    z-index: 2; /* Ensure it's above the "STORYTIME" text */
+    z-index: 2; /* Ensures it's above "STORYTIME" */
+    margin-bottom: 20px; /* Adds space between content and wordmark */
 }
 
 /* Logo Position */
@@ -355,7 +357,6 @@ body, h1, h2, p, span, a {
 .footer-social a:hover {
     color: #0056b3;
 }
-
 /* Responsive Adjustments */
 @media (max-width: 768px) {
     .footer-content {
