@@ -1,197 +1,166 @@
-/* General Reset */
+/* General Reset: Resets margins, paddings, and default styling for consistency */
 body, h1, h2, p, span, a {
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', Arial, sans-serif;
-    box-sizing: border-box;
-    text-decoration: none;
+    font-family: 'Poppins', Arial, sans-serif; /* Use Poppins font for all text */
+    box-sizing: border-box; /* Include padding and border in element's total size */
+    text-decoration: none; /* Remove underlines for links */
 }
 
 /* Navigation Bar */
 .nav-bar {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    padding: 15px 20px;
-    position: fixed;
+    justify-content: space-between; /* Space between logo and right-side content */
+    align-items: center; /* Center items vertically */
+    width: 100%; /* Full width navigation bar */
+    padding: 15px 20px; /* Padding inside the nav bar */
+    position: fixed; /* Fix position at the top */
     top: 0;
     left: 0;
-    background: transparent;
-    z-index: 10;
+    background: transparent; /* Transparent background for nav bar */
+    z-index: 10; /* Place nav bar above other elements */
 }
 
 /* Logo */
 .nav-logo img {
-    height: 70px;
+    height: 70px; /* Adjust the logo height for better visibility */
 }
 
 /* Navigation Items */
 .nav-items {
     display: flex;
-    gap: 60px;
-    margin: auto;
+    gap: 60px; /* Space between navigation links */
+    margin: auto; /* Center nav links horizontally */
     position: absolute;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%); /* Center nav items */
 }
 
 .nav-items a {
-    font-weight: 900;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900; /* Poppins Black for bold text */
     color: black;
-    font-size: 1.2rem;
-    text-transform: uppercase;
-    transition: color 0.3s ease;
+    font-size: 1.2rem; /* Font size for nav links */
+    text-transform: uppercase; /* Uppercase text styling */
+    transition: color 0.3s ease; /* Smooth color transition on hover */
 }
 
 .nav-items a:hover {
-    color: #0dace8;
+    color: #0dace8; /* Blue hover effect for nav links */
 }
 
 /* Social Icons */
 .nav-icons {
     display: flex;
-    gap: 15px;
+    gap: 15px; /* Space between social icons */
     position: relative;
-    margin-right: 45px;
+    margin-right: 45px; /* Padding from the right edge of the viewport */
 }
 
 .nav-icons a {
-    color: #0dace8;
-    font-size: 1.8rem;
-    transition: color 0.3s ease;
+    color: #0dace8; /* Match the blue color */
+    font-size: 1.8rem; /* Larger size for better visibility */
+    transition: color 0.3s ease; /* Smooth color transition on hover */
 }
 
 .nav-icons a:hover {
-    color: #000;
+    color: #000; /* Darker hover effect for social icons */
 }
 
-/* Mobile Menu */
+/* Hamburger Menu (Mobile) */
 .hamburger-menu {
-    display: none;
+    display: none; /* Hidden on desktop */
     font-size: 1.5rem;
     cursor: pointer;
     color: #000;
 }
 
+/* Mobile Menu */
 .mobile-menu {
-    display: none;
+    display: none; /* Hidden by default */
     flex-direction: column;
-    background: #f8f8f8;
-    padding: 10px 20px;
+    background: #f8f8f8; /* Light gray background for mobile menu */
+    padding: 10px 20px; /* Spacing inside the mobile menu */
     position: absolute;
-    top: 70px;
+    top: 70px; /* Below the nav bar */
     width: 100%;
-    z-index: 5;
+    z-index: 5; /* Ensure it appears above other elements */
 }
 
 .mobile-menu a {
-    font-weight: 900;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900; /* Bold text for links */
     color: black;
-    text-transform: uppercase;
+    text-transform: uppercase; /* Uppercase text styling */
     text-align: center;
-    margin: 10px 0;
-    transition: color 0.3s ease;
+    margin: 10px 0; /* Space between mobile menu links */
+    transition: color 0.3s ease; /* Smooth color transition on hover */
 }
 
 .mobile-menu a:hover {
-    color: #0dace8;
+    color: #0dace8; /* Blue hover effect for mobile menu links */
 }
 
 /* Hero Section */
 .hero {
     position: relative;
     width: 100%;
-    height: 80vh;
+    height: 80vh; /* Adjust height */
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 80px;
-    overflow: hidden;
+    margin-top: 80px; /* Space from navbar */
+    overflow: hidden; /* Prevents overflow */
 }
 
 /* Text Overlay: "STORYTIME" stays fixed in the center */
-.hero-text-container {
+.hero-text-overlay {
     position: absolute;
-    text-align: center;
-    z-index: 2;
-    pointer-events: none;
-    padding: 20px 50px;
-    position: relative;
-}
-
-/* Film Strip Effect */
-.hero-text-container::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 120%;
-    height: 150%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: -1;
-    border-radius: 5px;
-}
-
-/* Perforations on the film strip */
-.hero-text-container::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 125%;
-    height: 155%;
-    background-image: 
-        linear-gradient(to right, transparent 10%, white 10%, white 12%, transparent 12%, 
-                                        transparent 88%, white 88%, white 90%, transparent 90%);
-    background-size: 100% 10px;
-    background-repeat: repeat-y;
-    z-index: -1;
-}
-
-/* "STORYTIME" Text */
-.hero-title {
-    font-size: 5rem;
+    font-family: 'Poppins', sans-serif;
+    font-size: 5rem; /* Adjust size */
     text-transform: uppercase;
     text-align: center;
-    margin-bottom: 5px;
+    z-index: 2; /* Ensure it stays above the images */
+    pointer-events: none; /* Prevent interaction */
 }
 
-/* "STORY" in Blue, Bold */
-.hero-title .story {
-    color: #0dace8;
-    font-weight: 900;
+/* Styling for "STORY" */
+.hero-text-overlay .story {
+    color: #0dace8; /* Blue */
+    font-weight: 900; /* Extra Bold */
 }
 
-/* "TIME" in Black, Regular */
-.hero-title .time {
-    color: white;
-    font-weight: 400;
+/* Styling for "TIME" */
+.hero-text-overlay .time {
+    color: black;
+    font-weight: 400; /* Regular weight */
 }
 
-/* Subtitle */
+/* Subtitle Under "STORYTIME" */
 .hero-subtext {
-    font-weight: 400;
-    font-size: 1.5rem;
-    color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400; /* Regular weight */
+    font-size: 1.5rem; /* Smaller than the main title */
+    color: white; /* White text */
     text-transform: uppercase;
-    letter-spacing: 2px;
+    text-align: center;
+    margin-top: -20px; /* Spacing below the main title */
+    letter-spacing: 2px; /* Adds spacing for a sleek look */
+    position: relative; /* Ensure proper positioning */
 }
 
-/* Slider */
+/* Ensure the slider container takes full width and centers its content */
 .hero-slider {
     position: relative;
     width: 100%;
-    height: 80vh;
+    height: 80vh; /* Adjust height as needed */
     display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    overflow: hidden; /* Prevents overflow */
 }
 
-/* Slide Animations */
+/* Base Slide Styles */
 .slide {
     position: absolute;
     width: auto;
@@ -199,164 +168,197 @@ body, h1, h2, p, span, a {
     max-width: 100%;
     max-height: 100%;
     opacity: 0;
-    transform: translateX(100%);
+    transform: translateX(100%); /* Start off-screen to the right */
     transition: transform 1s ease-in-out, opacity 1s ease-in-out;
 }
 
+/* Active Slide (Centered in View) */
 .slide.active {
     opacity: 1;
-    transform: translateX(0);
+    transform: translateX(0); /* Moves into view */
 }
 
+/* Previous Slide (Exits Left) */
 .slide.prev {
     opacity: 0;
-    transform: translateX(-100%);
+    transform: translateX(-100%); /* Moves off-screen to the left */
 }
 
+/* Ensure images inside slides are centered properly */
 .slide img {
     display: block;
     width: auto;
     height: auto;
-    max-width: 80%;
-    max-height: 80vh;
-    margin: 0 auto;
+    max-width: 80%; /* Adjust size as needed */
+    max-height: 80vh; /* Prevent images from becoming too tall */
+    margin: 0 auto; /* Center horizontally */
+}
+
+/* Introductory Text Section */
+.intro-text {
+    text-align: center;
+    margin: 60px 20px; /* Adjust spacing around the text */
+}
+
+.intro-line-1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 23px;
+    font-weight: 900; /* Poppins Black */
+    color: #333;
+    text-transform: uppercase;
+    margin-bottom: 15px; /* Space between lines */
+}
+
+.intro-line-1 .highlight-blue {
+    color: #0dace8; /* Blue for "video" */
+}
+
+.intro-line-2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 17px;
+    font-weight: 400; /* Poppins Regular */
+    color: #333;
+    line-height: 1.5;
+    margin-top: 0; /* No extra space on top */
+    margin-bottom: 20px;
 }
 
 /* Services Section */
 .services {
-    padding: 40px 20px;
+    padding: 40px 20px; /* Padding inside the services section */
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 40px;
+    flex-direction: column; /* Stack services vertically */
+    align-items: center; /* Center all service items */
+    gap: 40px; /* Space between service items */
 }
 
-/* Service Container */
+/* Service container */
 .service {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    width: 80%;
-    max-width: 1000px;
+    display: flex; /* Arrange service content horizontally */
+    align-items: center; /* Align service image and text vertically */
+    justify-content: center; /* Center service items */
+    gap: 20px; /* Space between service image and text */
+    width: 80%; /* Set a max width for services */
+    max-width: 1000px; /* Prevent services from being too wide */
 }
 
-/* Service Images */
+/* General service image styling */
 .services .service img {
-    width: 30%;
-    max-width: 320px;
-    border-radius: 10px;
-    object-fit: cover;
+    width: 30%; /* Reduce image size */
+    max-width: 320px; /* Prevent images from getting too large */
+    border-radius: 10px; /* Preserve rounded corners */
+    object-fit: cover; /* Maintain aspect ratio */
 }
 
-/* Service Text */
+/* Text container */
 .service-text {
-    width: 60%;
-    text-align: left;
+    width: 60%; /* Increase text width */
+    text-align: left; /* Keep text left-aligned */
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: column; /* Stack text and button */
+    align-items: flex-start; /* Align text and button to the left */
 }
 
 .service-text h2 {
-    font-size: 1.5rem;
-    font-weight: 900;
-    color: #333;
-    margin-bottom: 10px;
+    font-size: 1.5rem; /* Font size for service heading */
+    font-weight: 900; /* Poppins Black */
+    color: #333; /* Dark gray color */
+    margin-bottom: 10px; /* Space below the heading */
 }
 
 .service-text .highlight {
-    color: #0dace8;
+    color: #0dace8; /* Highlighted blue text */
 }
 
 .service-text p {
-    font-size: 1rem;
-    margin-bottom: 20px;
+    font-size: 1rem; /* Font size for service paragraph */
+    margin-bottom: 20px; /* Space below the paragraph */
 }
 
-/* Button */
+/* Button styling */
 .button {
     display: inline-block;
-    padding: 10px 20px;
-    background: #0dace8;
-    color: white;
-    border-radius: 5px;
-    transition: background 0.3s;
+    padding: 10px 20px; /* Padding inside the button */
+    background: #0dace8; /* Blue background for button */
+    color: white; /* White text color */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Rounded corners for button */
+    transition: background 0.3s; /* Smooth background color transition */
 }
 
 .button:hover {
-    background: #0056b3;
+    background: #0056b3; /* Darker blue on hover */
 }
-
-/* Footer */
+/* Footer Section */
 .footer {
-    background: #f9f9f9;
-    padding: 20px 40px;
-    text-align: center;
+    background: #f9f9f9; /* Light gray background for footer */
+    padding: 20px 40px; /* Padding inside the footer */
+    text-align: center; /* Center text content */
 }
 
 .footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 20px;
+    display: flex; /* Arrange footer items horizontally */
+    justify-content: space-between; /* Space between items */
+    align-items: center; /* Align footer items vertically */
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    gap: 20px; /* Space between footer items */
 }
 
 .footer-logo img {
-    width: 50px;
-    margin-bottom: 10px;
+    width: 50px; /* Logo size */
+    margin-bottom: 10px; /* Space below the logo */
 }
 
 .footer-logo p {
-    font-size: 1rem;
-    font-weight: 800;
-    color: #54b1fd;
+    font-size: 1rem; /* Font size for logo text */
+    font-weight: 800; /* Bold text for emphasis */
+    color: #54b1fd; /* Blue text color */
 }
 
 .footer-button {
-    background: #54b1fd;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
+    background: #54b1fd; /* Blue background */
+    color: white; /* White text */
+    padding: 10px 20px; /* Padding inside the button */
+    border-radius: 5px; /* Rounded corners for button */
+    text-decoration: none; /* Remove underline */
 }
 
-/* Social Icons */
 .footer-social a {
-    color: #54b1fd;
-    font-size: 1.5rem;
-    margin-left: 10px;
-    transition: color 0.3s ease;
+    color: #54b1fd; /* Blue text color */
+    font-size: 1.5rem; /* Larger font size for social icons */
+    margin-left: 10px; /* Space between icons */
+    transition: color 0.3s ease; /* Smooth color transition */
 }
 
 .footer-social a:hover {
-    color: #0056b3;
+    color: #0056b3; /* Darker blue on hover */
 }
 
-/* Responsive */
+/* Responsive Design */
 @media (max-width: 768px) {
     .nav-items {
-        display: none;
+        display: none; /* Hide nav items for mobile */
     }
 
     .hamburger-menu {
-        display: block;
+        display: block; /* Show hamburger icon */
     }
 
+    /* Display the mobile menu when triggered */
     .mobile-menu.active {
         display: flex;
     }
 
     .service {
-        flex-direction: column;
+        flex-direction: column; /* Stack services vertically on mobile */
     }
 
     .service img {
-        width: 100%;
+        width: 100%; /* Full width images on mobile */
     }
 
     .service-text {
-        width: 100%;
+        width: 100%; /* Full width text on mobile */
         text-align: center;
     }
 }
