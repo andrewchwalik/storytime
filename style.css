@@ -228,29 +228,6 @@ body, h1, h2, p, span, a {
     gap: 20px; /* Space between service image and text */
 }
 
-/* Adjust layout for the first service */
-.services .service:first-of-type {
-    gap: 0; /* Remove gap between image and text */
-    align-items: center; /* Align items vertically for better balance */
-}
-
-/* Adjust the text container for the first service */
-.services .service:first-of-type .service-text {
-    margin-left: -100px; /* Pull text closer to the image */
-    width: auto; /* Allow the text container to shrink as needed */
-    max-width: 50%; /* Restrict maximum width */
-}
-
-/* Specific styling for the first service image */
-.services .service:first-of-type img {
-    position: relative; /* Enable positioning */
-    left: -5%; /* Move the image slightly off the screen to the left */
-    width: 45%; /* Reduce the width to prevent it from overpowering the layout */
-    max-width: 500px; /* Ensure it doesn't exceed a reasonable size */
-    object-fit: cover; /* Maintain the aspect ratio */
-    border-radius: 10px; /* Rounded corners for consistency */
-}
-
 /* General service image styling (for all other images) */
 .services .service img:not(:first-of-type) {
     position: static; /* Reset positioning for other images */
