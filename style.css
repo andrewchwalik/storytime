@@ -314,7 +314,6 @@ body, h1, h2, p, span, a {
 .footer-column {
     flex: 1; /* Make columns flexible */
     text-align: left;
-    padding: 10px;
 }
 
 /* Move Left Column (Logo) Further Left */
@@ -331,10 +330,11 @@ body, h1, h2, p, span, a {
 
 /* Center Middle Columns */
 .footer-middle {
-    flex: 2; /* Ensures middle columns are centered */
     display: flex;
-    justify-content: center; /* Center align middle columns */
-    gap: 60px; /* Adjust spacing between middle columns */
+    justify-content: center; /* Center the middle columns */
+    align-items: center;
+    flex: 2; /* Give it enough space in the layout */
+    gap: 80px; /* Space between the two middle columns */
 }
 
 /* Middle Columns: Page Links & Other Links */
