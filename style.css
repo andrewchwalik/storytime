@@ -313,6 +313,18 @@ body, h1, h2, p, span, a {
     border-radius: 50% / 100px; /* Creates the curved effect */
 }
 
+.footer-curve {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.footer-curve svg {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
 /* Footer Container */
 .footer-container {
     display: flex;
