@@ -300,6 +300,7 @@ body, h1, h2, p, span, a {
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    z-index: 2; /* Ensure footer stays above the curve */
 }
 
 .footer::before {
