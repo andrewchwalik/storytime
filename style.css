@@ -304,7 +304,7 @@ body, h1, h2, p, span, a {
 .footer-container {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    align-items: center;
     max-width: 1200px;
     width: 100%;
     flex-wrap: wrap;
@@ -331,10 +331,10 @@ body, h1, h2, p, span, a {
 
 /* Center Middle Columns */
 .footer-middle {
+    flex: 2; /* Ensures middle columns are centered */
     display: flex;
-    justify-content: center; /* Center the middle columns */
-    gap: 50px; /* Add spacing between the columns */
-    flex: 1.5; /* Ensure it takes equal space */
+    justify-content: center; /* Center align middle columns */
+    gap: 60px; /* Adjust spacing between middle columns */
 }
 
 /* Middle Columns: Page Links & Other Links */
@@ -376,26 +376,4 @@ body, h1, h2, p, span, a {
 
 .footer-social a:hover {
     color: #0dace8; /* Storytime blue on hover */
-}
-/* Responsive Design: Adjust for smaller screens */
-@media (max-width: 768px) {
-    .footer-container {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .footer-column {
-        text-align: center;
-        padding: 15px;
-    }
-
-    .footer-logo {
-        margin-left: 0; /* Reset for smaller screens */
-    }
-
-    .footer-social {
-        justify-content: center;
-        margin-top: 10px;
-    }
 }
