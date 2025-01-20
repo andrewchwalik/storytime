@@ -319,7 +319,8 @@ body, h1, h2, p, span, a {
 
 /* Move Left Column (Logo) Further Left */
 .footer-logo {
-    margin-left: -30px; /* Adjust this value as needed */
+    flex: 0.8; /* Reduce its space, pushing it further left */
+    margin-left: -50px; /* Adjust this value as needed */
 }
 
 .footer-logo img {
@@ -355,6 +356,7 @@ body, h1, h2, p, span, a {
     display: flex;
     gap: 15px;
     justify-content: flex-end; /* Align to the right */
+    flex: 1; /* Allow it to take remaining space */
 }
 
 .footer-social a {
