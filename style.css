@@ -251,6 +251,7 @@ body, h1, h2, p, span, a {
 
 .service-text h2 {
     font-size: 1.5rem; /* Font size for service heading */
+    font-weight: 900; /* Poppins Black */
     color: #333; /* Dark gray color */
     margin-bottom: 10px; /* Space below the heading */
 }
