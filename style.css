@@ -293,8 +293,8 @@ body, h1, h2, p, span, a {
 /* Footer Section */
 .footer {
     position: relative;
-    background: transparent; /* Ensure no background color */
-    padding: 40px 20px; /* Padding inside the footer */
+    background: transparent; /* No background color */
+    padding: 80px 20px 200px; /* Extra padding at the bottom to make space */
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -304,8 +304,8 @@ body, h1, h2, p, span, a {
 
 /* Large "STORYTIME" text spanning full width */
 .footer-wordmark {
-    position: fixed; /* Stick to the bottom */
-    bottom: 0; /* Align to the very bottom */
+    position: absolute;
+    bottom: -30px; /* Moves it slightly below the footer */
     left: 0;
     width: 100%;
     font-family: 'Poppins', sans-serif;
@@ -317,6 +317,7 @@ body, h1, h2, p, span, a {
     letter-spacing: -2px; /* Slightly reduce spacing for better fit */
     z-index: -1; /* Ensure it’s behind footer content */
     white-space: nowrap; /* Prevent line breaks */
+    overflow: hidden; /* Prevents it from overflowing */
 }
 
 /* Footer Content Layout */
