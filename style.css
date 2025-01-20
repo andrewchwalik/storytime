@@ -319,7 +319,7 @@ body, h1, h2, p, span, a {
 
 /* Left Column: Storytime Logo */
 .footer-logo img {
-    width: 150px; /* Increase size */
+    width: 250px; /* Increase size */
     height: auto; /* Maintain aspect ratio */
     max-width: 100%; /* Prevent overflow */
 }
