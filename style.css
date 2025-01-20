@@ -293,7 +293,7 @@ body, h1, h2, p, span, a {
 /* Footer Section */
 .footer {
     position: relative;
-    background: #f9f9f9; /* Light gray background */
+    background: transparent; /* Remove the light gray background */
     padding: 40px 20px; /* Padding inside the footer */
     text-align: center;
     display: flex;
@@ -311,7 +311,7 @@ body, h1, h2, p, span, a {
     font-family: 'Poppins', sans-serif;
     font-size: 12vw; /* Responsive font size */
     font-weight: 900;
-    color: #f9f9f9; /* Light gray */
+    color: #f9f9f9; /* Light gray text */
     text-transform: uppercase;
     text-align: center;
     letter-spacing: -2px; /* Slightly reduce spacing for better fit */
@@ -353,7 +353,6 @@ body, h1, h2, p, span, a {
 .footer-social a:hover {
     color: #0056b3;
 }
-
 /* Responsive Adjustments */
 @media (max-width: 768px) {
     .footer-content {
