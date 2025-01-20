@@ -228,17 +228,17 @@ body, h1, h2, p, span, a {
     gap: 20px; /* Space between service image and text */
 }
 
-/* General service image styling (for all other images) */
-.services .service img:not(:first-of-type) {
-    position: static; /* Reset positioning for other images */
-    width: 40%; /* Standard width for service images */
+/* General service image styling */
+.services .service img {
+    width: 30%; /* Reduce image size to 30% of the container */
+    max-width: 320px; /* Ensure images don't get too large */
     border-radius: 10px; /* Preserve rounded corners */
     object-fit: cover; /* Maintain aspect ratio */
 }
 
-/* Service text styling */
+/* Adjust text width to balance layout */
 .service-text {
-    width: 55%; /* Reduce width slightly to allow space for the first image */
+    width: 60%; /* Increase text width to balance smaller images */
 }
 
 .service-text h2 {
