@@ -117,13 +117,23 @@ body, h1, h2, p, span, a {
 .hero-text-overlay {
     position: absolute;
     font-family: 'Poppins', sans-serif;
-    font-weight: 900; /* Poppins Black */
     font-size: 5rem; /* Adjust size */
-    color: white; /* White text */
     text-transform: uppercase;
     text-align: center;
     z-index: 2; /* Ensure it stays above the images */
     pointer-events: none; /* Prevent interaction */
+}
+
+/* Styling for "STORY" */
+.hero-text-overlay .story {
+    color: #0dace8; /* Blue */
+    font-weight: 900; /* Extra Bold */
+}
+
+/* Styling for "TIME" */
+.hero-text-overlay .time {
+    color: black;
+    font-weight: 400; /* Regular weight */
 }
 
 /* Subtitle Under "STORYTIME" */
