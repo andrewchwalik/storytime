@@ -306,12 +306,13 @@ body, h1, h2, p, span, a {
 .footer::before {
     content: "";
     position: absolute;
-    top: -50px; /* Adjusted to move the curve closer */
+    bottom: 100%; /* Move it behind the footer */
     left: 0;
     width: 100%;
     height: 80px; /* Slightly reduced height of the curve */
     background: #f9f9f9; /* Same as footer background */
     border-radius: 50% / 90px; /* Creates a smoother curve */
+    z-index: -1; /* Place it behind the footer */
 }
 
 .footer-curve {
