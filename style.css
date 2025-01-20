@@ -317,7 +317,11 @@ body, h1, h2, p, span, a {
     padding: 10px;
 }
 
-/* Left Column: Storytime Logo */
+/* Move Left Column (Logo) Further Left */
+.footer-logo {
+    margin-left: -30px; /* Adjust this value as needed */
+}
+
 .footer-logo img {
     width: 250px; /* Increase size */
     height: auto; /* Maintain aspect ratio */
@@ -350,6 +354,7 @@ body, h1, h2, p, span, a {
 .footer-social {
     display: flex;
     gap: 15px;
+    justify-content: flex-end; /* Align to the right */
 }
 
 .footer-social a {
@@ -360,4 +365,27 @@ body, h1, h2, p, span, a {
 
 .footer-social a:hover {
     color: #0dace8; /* Storytime blue on hover */
+}
+
+/* Responsive Design: Adjust for smaller screens */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-column {
+        text-align: center;
+        padding: 15px;
+    }
+
+    .footer-logo {
+        margin-left: 0; /* Reset for smaller screens */
+    }
+
+    .footer-social {
+        justify-content: center;
+        margin-top: 10px;
+    }
 }
