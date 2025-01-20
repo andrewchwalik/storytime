@@ -294,11 +294,28 @@ body, h1, h2, p, span, a {
 .footer {
     position: relative;
     background: #f9f9f9; /* Light gray background */
-    padding: 40px 60px; /* Add padding for spacing */
+    padding: 40px 20px; /* Padding inside the footer */
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+}
+
+/* Large "STORYTIME" text spanning full width */
+.footer-wordmark {
+    position: absolute;
+    bottom: -20px; /* Adjust placement */
+    left: 0;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12vw; /* Responsive font size */
+    font-weight: 900;
+    color: #d3d3d3; /* Light gray */
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: -2px; /* Slightly reduce spacing for better fit */
+    z-index: -1; /* Place it behind the footer content */
 }
 
 /* Footer Content Layout */
@@ -307,71 +324,48 @@ body, h1, h2, p, span, a {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    max-width: 1200px;
+    max-width: 1200px; /* Prevent content from stretching too wide */
     position: relative;
-    z-index: 2;
+    z-index: 2; /* Ensure it's above the "STORYTIME" text */
 }
 
-/* Footer Logo (Top Left) */
+/* Logo Position */
 .footer-logo {
-    position: absolute;
-    left: 60px;
-    top: 20px;
+    text-align: left;
 }
 
 .footer-logo img {
-    width: 60px; /* Adjust logo size */
+    width: 80px; /* Adjust size */
 }
 
-/* Footer Social Icons (Top Right) */
+/* Social Icons */
 .footer-social {
-    position: absolute;
-    right: 60px;
-    top: 20px;
+    display: flex;
+    gap: 15px;
 }
 
 .footer-social a {
-    color: #000;
-    font-size: 1.5rem;
-    margin-left: 15px;
+    font-size: 1.8rem;
+    color: #0dace8; /* Blue color */
     transition: color 0.3s ease;
 }
 
 .footer-social a:hover {
-    color: #0dace8;
+    color: #0056b3;
 }
 
-/* Footer Links */
-.footer-links {
-    display: flex;
-    gap: 30px;
-    font-size: 0.875rem;
-    color: #333;
-    text-transform: uppercase;
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .footer-logo, .footer-social {
+        margin-bottom: 15px;
+    }
 }
 
-/* Footer Copyright */
-.footer-bottom {
-    font-size: 0.75rem;
-    color: #666;
-    margin-top: 10px;
-}
-
-/* STORYTIME Background Text */
-.footer-title {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 900;
-    font-size: 14vw; /* Makes sure it fits edge to edge */
-    text-transform: uppercase;
-    text-align: center;
-    color: rgba(0, 0, 0, 0.1); /* Light gray color */
-    white-space: nowrap;
-    z-index: 1;
-}
 /* Responsive Design */
 @media (max-width: 768px) {
     .nav-items {
