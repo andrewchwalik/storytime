@@ -428,11 +428,13 @@ body, h1, h2, p, span, a {
 .pricing-header .regular-text {
     font-weight: 400;
     color: black;
+    font-size: 2rem;
 }
 
 .pricing-header .blue-text {
     font-weight: 900;
     color: #0dace8;
+    font-size: 3rem;
 }
 
 /* Pricing Intro Section */
