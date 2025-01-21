@@ -63,7 +63,7 @@ body, h1, h2, p, span, a {
     border-radius: 5px;
     transition: background 0.3s ease;
     margin-left: auto; /* Pushes it to the right */
-    margin-right: 100px; /* Ensures proper spacing from the edge */
+    margin-right: 85px; /* Ensures proper spacing from the edge */
     position: relative;
 }
 
