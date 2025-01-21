@@ -409,3 +409,130 @@ body, h1, h2, p, span, a {
 .footer-social a:hover {
     color: #0dace8; /* Storytime blue on hover */
 }
+
+
+/* Pricing Page */
+
+/* Pricing Page Header */
+.pricing-header {
+    text-align: center;
+    margin-top: 150px;
+}
+
+.pricing-header h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 3rem;
+    margin: 5px 0;
+}
+
+.pricing-header .regular-text {
+    font-weight: 400;
+    color: black;
+}
+
+.pricing-header .blue-text {
+    font-weight: 900;
+    color: #0dace8;
+}
+
+/* Pricing Intro Section */
+.pricing-intro {
+    text-align: center;
+    margin: 50px auto;
+    max-width: 800px;
+}
+
+.pricing-intro h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;
+    font-size: 2rem;
+    color: black;
+}
+
+.pricing-intro .blue-text {
+    color: #0dace8;
+}
+
+.pricing-subtext {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.button {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #0dace8;
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.button:hover {
+    background: #0056b3;
+}
+
+/* Pricing Section */
+.pricing-section {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.pricing-section h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;
+    font-size: 2.5rem;
+    color: black;
+    margin-bottom: 30px;
+}
+
+/* Pricing Grid */
+.pricing-grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+/* Pricing Cards */
+.pricing-card {
+    background: white;
+    border: 2px solid #0dace8;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.pricing-card h3 {
+    font-size: 1.5rem;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-size: 2rem;
+    font-weight: 900;
+    color: #0dace8;
+    margin-bottom: 15px;
+}
+
+/* Checkmark Features */
+.pricing-features {
+    list-style: none;
+    padding: 0;
+}
+
+.pricing-features li {
+    font-size: 1rem;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.pricing-features i {
+    color: #0dace8;
+    margin-right: 5px;
+}
