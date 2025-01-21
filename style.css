@@ -555,7 +555,7 @@ body, h1, h2, p, span, a {
     word-wrap: break-word; /* Allow wrapping within the width */
     line-height: 1.3; /* Improve text readability */
     padding: 0; /* Remove any extra padding */
-    margin: 5px; /* Remove any extra margins */
+    margin: 3px; /* Remove any extra margins */
 }
 
 /* Ensure checkmark stays aligned */
