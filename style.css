@@ -507,6 +507,31 @@ body, h1, h2, p, span, a {
     margin-bottom: 15px;
 }
 
+/* Pricing Description (Sentence below the price) */
+.pricing-description {
+    font-size: 1rem;
+    color: #333;
+    margin: 10px 0 15px; /* Space above and below */
+    text-align: center;
+}
+
+/* Watch an Example Button */
+.watch-example-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #0dace8; /* Storytime blue */
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+    margin-top: auto; /* Pushes it to the bottom of the card */
+}
+
+.watch-example-button:hover {
+    background: #0056b3;
+}
+
 /* Pricing Features (Checkmarks & Text) */
 .pricing-features {
     list-style: none;
