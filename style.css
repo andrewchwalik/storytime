@@ -408,6 +408,13 @@ body, h1, h2, p, span, a {
     font-size: 5rem;
 }
 
+.header-line-3 {
+    font-size: 1.5rem; /* Adjust as needed */
+    font-weight: 400; /* Regular weight */
+    color: black;
+    margin-top: -10px; /* Moves it closer to Line 2 */
+}
+
 /* Pricing Intro Section */
 .pricing-intro {
     text-align: center;
