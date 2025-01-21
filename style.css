@@ -394,6 +394,17 @@ body, h1, h2, p, span, a {
     font-size: 3rem;
     margin: 6px 0;
     line-height: 0.9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.header-line-3 {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: black;
+    margin-top: -15px !important; /* Force closer spacing */
 }
 
 .pricing-header .regular-text {
@@ -406,15 +417,6 @@ body, h1, h2, p, span, a {
     font-weight: 900;
     color: #0dace8;
     font-size: 5rem;
-}
-
-.header-line-3 {
-    font-size: 1.5rem;
-    font-weight: 400;
-    color: black;
-    display: block;
-    margin-top: -25px; /* Adjust spacing */
-    line-height: 1; /* Reduce line spacing */
 }
 
 /* Pricing Intro Section */
