@@ -543,6 +543,7 @@ body, h1, h2, p, span, a {
     flex-direction: column;
     align-items: flex-start; /* Center checkmarks & text */
     gap: 5px; /* Reduce spacing */
+    padding-left: 15px; /* Moves the entire list slightly to the right */
 }
 
 .pricing-features li {
