@@ -566,3 +566,8 @@ body, h1, h2, p, span, a {
     flex-shrink: 0; /* Prevent checkmark from shrinking */
     margin-top: 3px; /* Slightly adjust position */
 }
+
+/* Adjust spacing for Full Day section only */
+.full-day .package-description {
+    margin-bottom: 25px; /* Increase space below description */
+}
