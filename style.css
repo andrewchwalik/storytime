@@ -49,56 +49,24 @@ body, h1, h2, p, span, a {
     color: #0dace8; /* Blue hover effect for nav links */
 }
 
-/* Social Icons */
-.nav-icons {
-    display: flex;
-    gap: 15px; /* Space between social icons */
-    position: relative;
-    margin-right: 45px; /* Padding from the right edge of the viewport */
-}
-
-.nav-icons a {
-    color: #0dace8; /* Match the blue color */
-    font-size: 1.8rem; /* Larger size for better visibility */
-    transition: color 0.3s ease; /* Smooth color transition on hover */
-}
-
-.nav-icons a:hover {
-    color: #000; /* Darker hover effect for social icons */
-}
-
-/* Hamburger Menu (Mobile) */
-.hamburger-menu {
-    display: none; /* Hidden on desktop */
-    font-size: 1.5rem;
-    cursor: pointer;
-    color: #000;
-}
-
-/* Mobile Menu */
-.mobile-menu {
-    display: none; /* Hidden by default */
-    flex-direction: column;
-    background: #f8f8f8; /* Light gray background for mobile menu */
-    padding: 10px 20px; /* Spacing inside the mobile menu */
-    position: absolute;
-    top: 70px; /* Below the nav bar */
-    width: 100%;
-    z-index: 5; /* Ensure it appears above other elements */
-}
-
-.mobile-menu a {
+/* "Book a Call" Button */
+.nav-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #0dace8; /* Storytime blue */
+    color: white;
+    text-decoration: none;
     font-family: 'Poppins', sans-serif;
-    font-weight: 900; /* Bold text for links */
-    color: black;
-    text-transform: uppercase; /* Uppercase text styling */
-    text-align: center;
-    margin: 10px 0; /* Space between mobile menu links */
-    transition: color 0.3s ease; /* Smooth color transition on hover */
+    font-weight: 700;
+    font-size: 1rem;
+    text-transform: uppercase;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+    margin-left: auto; /* Push it to the right */
 }
 
-.mobile-menu a:hover {
-    color: #0dace8; /* Blue hover effect for mobile menu links */
+.nav-button:hover {
+    background: #0056b3; /* Darker blue on hover */
 }
 
 /* Hero Section */
