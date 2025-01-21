@@ -8,53 +8,41 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="icon" href="/img/storytime-favicon.png" type="image/png">
+    <script src="/script.js"></script>
 </head>
 <body>
-    <!-- Navigation Bar -->
-    <nav class="nav-bar">
-        <!-- Logo -->
-        <div class="nav-logo">
-            <img src="/img/storytime-logo.png" alt="Storytime Logo">
-        </div>
-        <!-- Navigation Links -->
-        <div class="nav-items">
-            <a href="#">Wedding</a>
-            <a href="#">Real Estate</a>
-            <a href="#">Events</a>
-        </div>
-        <!-- Social Icons -->
-        <div class="nav-icons">
-            <a href="https://www.youtube.com/@storytimevids" target="_blank">
-                <i class="fab fa-youtube"></i>
-            </a>
-            <a href="https://www.instagram.com/storytime.ooo/" target="_blank">
-                <i class="fab fa-instagram"></i>
-            </a>
-        </div>
-        <!-- Hamburger Menu -->
-        <div class="hamburger-menu">
-            <i class="fas fa-bars"></i>
-        </div>
-    </nav>
 
-    <!-- Mobile Menu -->
-    <div class="mobile-menu">
-        <a href="#">Wedding</a>
+<!-- Navigation Bar -->
+<nav class="nav-bar">
+    <!-- Logo -->
+    <div class="nav-logo">
+        <a href="/">
+            <img src="/img/storytime-logo.png" alt="Storytime Logo">
+        </a>
+    </div>
+
+    <!-- Navigation Links -->
+    <div class="nav-items">
+        <a href="/weddings/">Weddings</a>
         <a href="#">Real Estate</a>
         <a href="#">Events</a>
     </div>
 
+    <!-- "Book a Call" Button -->
+    <a href="https://tidycal.com/chwalik/storytime-videography-chat" class="nav-button">Book a Call</a>
+</nav>
+
 <!-- Hero Section -->
 <section class="hero">
-    <h1 class="hero-title">
-        <span class="hero-line-1">Telling the story of your</span><br>
-        <span class="hero-line-2">WEDDING</span><br>
-        <span class="hero-line-3">with video.</span>
-    </h1>
-    <div class="hero-images">
-        <img src="/img/event-cover.png" alt="Event Cover" class="hero-image left-image">
-        <img src="/img/wedding-cover.png" alt="Wedding Cover" class="hero-image main-image">
-        <img src="/img/real-estate-cover.png" alt="Real Estate Cover" class="hero-image right-image">
+     <div class="hero-text-overlay">
+        <span class="story">STORY</span><span class="time">TIME</span>
+        <div class="hero-subtext">TELLING YOUR STORY WITH VIDEO</div>
+    </div>
+    <div class="hero-slider">
+        <img src="/img/wedding-header.png" alt="Wedding" class="slide active">
+        <img src="/img/real-estate-header.png" alt="Real Estate" class="slide">
+        <img src="/img/event-header.png" alt="Event" class="slide">
     </div>
 </section>
 
@@ -79,13 +67,13 @@
             <p>
                 No matter your budget, we have a package you’ll love (maybe just as much as your significant other). Looking for a budget friendly option to just capture your ceremony? Check. Want a video that highlights your entire wedding day? Check.
             </p>
-            <a href="#" class="button">Pricing</a>
+            <a href="/weddings/" class="button">Pricing</a>
         </div>
     </div>
         <div class="service">
-            <img src="https://via.placeholder.com/400x300" alt="Real Estate Video">
+            <img src="/img/real-estate-service.png" alt="Real Estate Video">
             <div class="service-text">
-                <h2>Hype up your <span class="highlight">Real Estate</span> listing with a walkthrough video & 3D tour.</h2>
+                <h2>HYPE UP YOUR <span class="highlight">REAL ESTATE</span> LISTING WITH A WALKTHROUGH VIDEO & 3D TOUR.</h2>
                 <p>
                     Make your listing the envy of all your realtor buddies and get that house sold with professional video content. We’ll create a walkthrough video and 3D tour that are MLS and client approved.
                 </p>
@@ -93,9 +81,9 @@
             </div>
         </div>
         <div class="service">
-            <img src="https://via.placeholder.com/400x300" alt="Event Video">
+            <img src="/img/event-service.png" alt="Event Video">
             <div class="service-text">
-                <h2>Give your attendees the perfect keepsake with an <span class="highlight">Event Highlight</span> video.</h2>
+                <h2>GIVE YOUR ATTENDEES THE PERFECT KEEPSAKE WITH AN <span class="highlight">EVENT HIGHLIGHT</span> VIDEO.</h2>
                 <p>
                     We’ll produce a video that not only highlights all the fun had at your event, but it’ll also be the perfect way to market your event for years to come. Let our videographer capture speaker content, attendee interviews, and the excitement you have planned.
                 </p>
@@ -105,26 +93,51 @@
     </section>
 
     <!-- Footer Section -->
-    <footer class="footer">
-        <div class="footer-content">
-            <!-- Footer Logo -->
-            <div class="footer-logo">
-                <img src="img/storytime-logo.png" alt="Storytime Logo">
-                <p>Storytime</p>
-            </div>
-            <!-- Footer Button -->
-            <a href="#" class="footer-button">Book a Call</a>
-            <!-- Footer Social Links -->
-            <div class="footer-social">
-                <a href="https://www.youtube.com/@storytimevids" target="_blank">
-                    <i class="fab fa-youtube"></i>
-                </a>
-                <a href="https://www.instagram.com/storytime.ooo/" target="_blank">
-                    <i class="fab fa-instagram"></i>
-                </a>
-            </div>
+<div class="footer-curve">
+    <svg viewBox="0 0 1440 320">
+        <path fill="#f9f9f9" fill-opacity="1"
+            d="M0,224L48,213.3C96,203,192,181,288,181.3C384,181,480,203,576,213.3C672,224,768,224,864,202.7C960,181,1056,139,1152,133.3C1248,128,1344,160,1392,176L1440,192L1440,320L0,320Z">
+        </path>
+    </svg>
+</div>
+<footer class="footer">
+    <div class="footer-container">
+        <!-- Left Column: Logo -->
+        <div class="footer-column footer-logo">
+            <a href="/">
+                <img src="/img/storytime-logo.png" alt="Storytime Logo">
+            </a>
         </div>
-    </footer>
+
+        <!-- Middle Left Column: Page Links -->
+        <div class="footer-column">
+            <ul class="footer-links">
+                <li><a href="/weddings/">Weddings</a></li>
+                <li><a href="#">Real Estate</a></li>
+                <li><a href="#">Events</a></li>
+            </ul>
+        </div>
+
+        <!-- Middle Right Column: Other Links -->
+        <div class="footer-column">
+            <ul class="footer-links">
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Terms & Conditions</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+            </ul>
+        </div>
+
+        <!-- Right Column: Social Icons -->
+        <div class="footer-column footer-social">
+            <a href="https://www.youtube.com/@storytimevids" target="_blank">
+                <i class="fab fa-youtube"></i>
+            </a>
+            <a href="https://www.instagram.com/storytime.ooo/" target="_blank">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+    </div>
+</footer>
 
     <!-- JavaScript for Mobile Menu -->
     <script>
