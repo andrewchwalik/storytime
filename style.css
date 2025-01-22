@@ -597,8 +597,11 @@ body, h1, h2, p, span, a {
 .add-ons-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* Three columns */
-    gap: 40px;
+    gap: 20px; /* Reduce spacing between cards */
     justify-content: center;
+    align-items: center;
+    max-width: 1000px; /* Limit width for centering */
+    margin: 0 auto; /* Center the grid */
 }
 
 /* Add-Ons Cards */
