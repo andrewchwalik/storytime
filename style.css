@@ -571,3 +571,60 @@ body, h1, h2, p, span, a {
 .full-day .package-description {
     margin-bottom: 25px; /* Increase space below description */
 }
+
+/* Add-Ons Section */
+.add-ons {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.add-ons h2 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;
+    font-size: 2.5rem;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.add-ons-description {
+    max-width: 800px;
+    margin: 0 auto 30px;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+/* Add-Ons Grid */
+.add-ons-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three columns */
+    gap: 40px;
+    justify-content: center;
+}
+
+/* Add-Ons Cards */
+.add-ons-grid .pricing-card {
+    background: white;
+    border: 2px solid #0dace8;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.add-ons-grid .pricing-card h3 {
+    font-size: 1.5rem;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.add-ons-grid .price {
+    font-size: 2rem;
+    font-weight: 900;
+    color: #0dace8;
+    margin-bottom: 10px;
+}
+
+.add-ons-grid .pricing-description {
+    font-size: 1rem;
+    color: #333;
+}
