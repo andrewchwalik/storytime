@@ -79,6 +79,7 @@ body, h1, h2, p, span, a {
     width: 100%;
     overflow: hidden;
     line-height: 0;
+    z-index: -1;
 }
 
 .header-curve svg {
