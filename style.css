@@ -387,12 +387,12 @@ body, h1, h2, p, span, a {
 
 .footer-social a {
     font-size: 1.8rem;
-    color: black;
+    color: #0dace8;
     transition: color 0.3s ease;
 }
 
 .footer-social a:hover {
-    color: #0dace8; /* Storytime blue on hover */
+    color: black; /* Storytime blue on hover */
 }
 
 
