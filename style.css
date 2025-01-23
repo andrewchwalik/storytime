@@ -72,6 +72,21 @@ body, h1, h2, p, span, a {
 }
 
 /* Hero Section */
+.header-curve {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.header-curve svg {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
 .hero {
     position: relative;
     width: 100%;
