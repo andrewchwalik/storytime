@@ -280,7 +280,7 @@ body, h1, h2, p, span, a {
 .footer {
     position: relative;
     background: #f9f9f9; /* Light gray background */
-    padding: 1px 20px 40px; /* Reduced top padding */
+    padding: 40px 20px; /* Adjusted padding for better spacing */
     text-align: center;
     display: flex;
     justify-content: center;
@@ -289,16 +289,17 @@ body, h1, h2, p, span, a {
     z-index: 2; /* Ensure footer stays above the curve */
 }
 
+/* Footer Curve */
 .footer::before {
     content: "";
     position: absolute;
-    bottom: 100%; /* Move it behind the footer */
+    bottom: 100%;
     left: 0;
     width: 100%;
-    height: 80px; /* Slightly reduced height of the curve */
-    background: #f9f9f9; /* Same as footer background */
-    border-radius: 50% / 90px; /* Creates a smoother curve */
-    z-index: -1; /* Place it behind the footer */
+    height: 80px;
+    background: #f9f9f9;
+    border-radius: 50% / 90px;
+    z-index: -1;
 }
 
 .footer-curve {
@@ -313,45 +314,44 @@ body, h1, h2, p, span, a {
     height: auto;
 }
 
+/* Footer Container */
 .footer-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Four equal columns */
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
     max-width: 1200px;
     width: 100%;
-    padding-top: 10px;
-    gap: 40px; /* Even spacing between columns */
-    text-align: left;
+    margin: 0 auto;
+    flex-wrap: wrap; /* Ensure responsiveness */
 }
 
+/* Adjust Columns */
 .footer-column {
+    flex: 1;
+    text-align: left;
+    min-width: 180px; /* Keep a minimum width for balance */
+}
+
+/* Adjust Logo Column */
+.footer-logo {
+    flex: 0.5;
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Align text to the left */
-}
-
-/* Move Left Column (Logo) Further Left */
-.footer-logo {
-    flex: 0.8; /* Reduce its space, pushing it further left */
-    margin-left: -50px; /* Adjust this value as needed */
+    align-items: flex-start;
 }
 
 .footer-logo img {
-    width: 250px; /* Increase size */
-    height: auto; /* Maintain aspect ratio */
-    max-width: 100%; /* Prevent overflow */
+    width: 200px; /* Adjusted size for better proportions */
+    height: auto;
+    max-width: 100%;
 }
 
 /* Center Middle Columns */
 .footer-middle {
     display: flex;
-    justify-content: center; /* Center the middle columns */
-    gap: 100px; /* Space between the middle columns */
+    justify-content: center;
+    gap: 60px; /* Adjusted gap to evenly distribute */
     flex: 2;
-}
-
-.footer-column {
-    flex: 1;
-    text-align: left; /* Keep text aligned left */
 }
 
 /* Middle Columns: Page Links & Other Links */
@@ -359,7 +359,6 @@ body, h1, h2, p, span, a {
     list-style: none;
     padding: 0;
     margin: 0;
-    text-align: left;
 }
 
 .footer-links li {
@@ -367,34 +366,34 @@ body, h1, h2, p, span, a {
 }
 
 .footer-links a {
-    color: black; /* Default black text */
+    color: black;
     text-decoration: none;
     font-size: 1rem;
     transition: color 0.3s ease;
 }
 
 .footer-links a:hover {
-    color: #0dace8; /* Storytime blue on hover */
+    color: #0dace8;
 }
 
 /* Right Column: Social Icons */
 .footer-social {
+    flex: 0.5;
     display: flex;
-    gap: 15px;
-    justify-content: flex-end; /* Align to the right */
-    flex: 1; /* Allow it to take remaining space */
+    flex-direction: column;
+    align-items: flex-end;
 }
 
 .footer-social a {
     font-size: 1.8rem;
     color: #0dace8;
     transition: color 0.3s ease;
+    margin-bottom: 10px; /* Space between icons */
 }
 
 .footer-social a:hover {
-    color: black; /* Storytime blue on hover */
+    color: black;
 }
-
 
 /* Pricing Page */
 
